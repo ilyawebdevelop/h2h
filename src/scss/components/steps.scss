@@ -1,0 +1,71 @@
+.steps {
+  padding-top: 0;
+  padding-bottom: 0;
+  background: linear-gradient(162deg, #555 0%, #3b3b3b 100%);
+  position: relative;
+  overflow: hidden;
+  .container  {
+    position: relative;
+    padding-top: 90px;
+    padding-bottom: 90px;
+    @media(max-width: 991px){
+      padding-top: 60px;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      width: 1250px;
+      object-fit: contain;
+      object-position: center;
+      height: 100%;
+      left: -50px;    
+      top: 7px;
+      bottom: 7px;
+      background: url('@img/steps/steps-arrow.png') no-repeat center center / contain;
+      @media(max-width: 575px){
+        width: 100%;
+        left: 0;
+        height: 1020px;
+        top: unset;
+        bottom: -200px;
+        background: url('@img/steps/steps-arrow-bottom.svg') no-repeat center center / contain;
+      }
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      object-fit: contain;
+      object-position: center;
+      height: 1000px;
+      left: 0;    
+      top: -180px;    
+      background: url('@img/steps/steps-arrow-top.svg') no-repeat center center / contain;
+      display: none;
+      @media(max-width: 575px){
+        display: block;
+      }
+    }
+  }
+  &Item {
+    &Icon {
+      background-color: var(--krasnyy);
+      border-radius: 50%;
+      color: #fff;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: -5px;
+    }
+    &Descr {
+      color: var(--secondary);
+    }
+    &Content {
+      max-width: 268px;
+    }
+  }
+ 
+}

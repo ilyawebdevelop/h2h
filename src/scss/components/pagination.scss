@@ -1,0 +1,32 @@
+.pag-page {
+  width: 56px;
+  height: 56px;
+  @include flex-all-center;
+  border-bottom: 2px solid transparent;
+  transition: color .2s linear;
+  &:hover {
+    color: var(--krasnyy);
+  }
+  &.current {
+    color: var(--krasnyy);
+    border-bottom: 2px solid var(--krasnyy);
+  }
+}
+.pag-next, .pag-prev {
+  width: 56px;
+  height: 56px;
+  @include flex-all-center;
+  &:hover {
+    fill: var(--krasnyy);
+  }
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+  &.pag-disabled {
+    pointer-events: none;
+    svg {
+      fill: var(--secondary);
+    }
+  }
+}

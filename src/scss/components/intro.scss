@@ -1,0 +1,102 @@
+.intro {
+  background: linear-gradient(154deg, #f7f0e9 0%, #ebe2d8 100%);
+  position: relative;
+  padding-top: 0;
+  padding-bottom: 0;
+  overflow: hidden;
+  &Content {
+    position: relative;
+    z-index: 2;
+  }
+  .container {
+    position: relative;
+    z-index: 1;
+    padding-bottom: 80px;
+    padding-top: 80px;
+    @media(max-width: 991px){
+      padding-top: 50px;
+      padding-bottom: 128px;
+    }
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: url('@img/intro/intro-arrow.svg') no-repeat center center / contain;
+    @media(max-width: 767px){
+      width: 276px;
+      height: 275px;
+    }
+  }
+  &Title {
+    color: var(--temno-seryy);
+  }
+
+  &Subtitle {
+    font-size: 24px;
+    line-height: 36px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    max-width: 510px;
+    margin-bottom: 40px;
+    @media(max-width: 991px){
+      font-size: 18px;
+      line-height: 156%;
+      letter-spacing: -0.01em;
+      max-width: 280px;
+      margin-bottom: 20px;
+    }
+    span {
+      @media(max-width: 991px){
+        font-weight: 600;
+      }
+    }
+  }
+  &Item {
+    column-gap: 20px;
+    &:not(:last-child){
+      margin-bottom: 24px;
+      @media(max-width: 991px){
+        margin-bottom: 16px;
+      }
+    }
+    span {
+      @media(max-width: 991px){
+        max-width: 213px;
+      }
+    }
+  }
+  &Img {
+    position: absolute;
+    left: 210px;
+    bottom: 0;
+    width: 1049px;
+    height: 100%;
+    object-fit: cover;
+    object-position: bottom;
+    z-index: 1;
+    @media(max-width: 1199px){
+      height: 550px;
+      width: 540px;
+      right: 0;
+      left: unset;
+    }
+    @media(max-width: 991px){
+      width: 440px;
+      height: 350px;
+      right: 100px;
+    }
+    @media(max-width: 767px){
+      right: -30px;
+    }
+    @media(max-width: 575px){
+      width: 378px;
+      height: 298px;
+      bottom: -50px;
+      right: -59px;
+    }
+  }
+}

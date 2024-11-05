@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/png" href="img/favicon.png">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="css/style.min.css">
+	<title>Авторизация</title>
+</head>
+
+<body>
+	
+	<div class="wrapper bg--bezh">
+		<!-- Header -->
+<header class="header border-b-outline" id="header">
+  <div class="container headerContainer">
+    <div class="d-flex align-items-center justify-content-between py-3">
+      <a href="#" class="logo">
+        <img src="img/admin/logo/logo-orange.svg" alt="logo">
+      </a>
+      <button class="button gap-2 px-0">
+        <svg>
+          <use xlink:href="img/icons/icons.svg#karandash"></use>
+        </svg>
+        <div class="text-uppercase text--sm fw-semibold">
+          Оставить заявку
+        </div>
+      </button>
+    </div>
+  </div>
+</header>
+		<main class="main">		
+			<section class="sect pt-4 authorize-bg">
+  <div class="container headerContainer">
+    <a href="#" class="prevPage mb-3">
+      <svg>
+        <use xlink:href="img/icons/icons.svg#arrow-back"></use>
+      </svg>
+    </a>
+    <form action="#" class="form authorizeForm">
+      <div class="d-flex align-items-center mb-5 justify-content-center justify-content-sm-between">
+        <h3 class="text-uppercase">
+          Вход
+        </h3>
+        <a class="text--sm color--orange d-none d-sm-block" href="#">Зарегистрироваться</a>
+      </div>
+      <div class="form-floating mb-2">
+        <input type="email" class="form-control" id="floatingInput" placeholder="Email">
+        <label for="floatingInput">Email</label>
+      </div>
+      <div class="form-floating">
+        <input type="password" class="form-control password-field" id="password_1" placeholder="Пароль">
+        <label for="password_1">Пароль</label>
+        <button class="togglePassword" id="togglePassword_1" type="button"></button>
+      </div>
+      <div class="d-flex align-items-center justify-content-between mt-3 mt-sm-5 flex-column-reverse flex-sm-row">
+        <button class="button button--transparent-black text-uppercase text--sm width-sm-100 d-flex d-sm-none">
+          Зарегистрироваться
+        </button>
+        <button class="button button--black text-uppercase text--sm width-sm-100 mb-2">
+          отправить
+        </button>
+        <a class="text--sm color--orange mb-5 mb-sm-0" href="#">Забыли пароль?</a>
+      </div>
+
+    </form>
+  </div>
+</section>
+		</main>
+		
+		<!-- modal -->
+<!-- modalPay -->
+<div class="modal" id="modalPay">
+
+  <div class="modalHead">
+    <button data-fancybox-close class="f-button is-close-btn" title="Close"><svg xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24" tabindex="-1">
+        <path d="M20 20L4 4m16 0L4 20"></path>
+      </svg>
+    </button>
+  </div>
+
+  <div class="modalContent">
+    <h3 class="h3 h3--sm-h5 text-uppercase text-start text-sm-center mb-3 mb-sm-2">Оплатить по счёту</h3>
+    <p class="modalDescr text-start text-sm-center mb-0 mb-lg-4 pb-3">
+      Авансовая оплата по договору
+    </p>
+    <form class="modalForm" action="#">
+
+      <div class="mb-2">
+        <div class="form-floating">
+          <input type="text" class="form-control" id="modalorg" placeholder="Название организации">
+          <label for="modalorg">Название организации</label>
+        </div>
+      </div>
+      <div class="mb-2">
+        <div class="form-floating">
+          <input type="text" class="form-control" id="modalinn" placeholder="ИНН">
+          <label for="modalinn">ИНН</label>
+        </div>
+      </div>
+      <div class="mb-2">
+        <div class="form-floating">
+          <input type="text" class="form-control" id="modalbik" placeholder="БИК">
+          <label for="modalbik">БИК</label>
+        </div>
+      </div>
+      <div class="form-floating mb-2">
+        <textarea name="modalYur" id="modalYur" cols="30" rows="10" class="form-control formText"
+          placeholder="Адрес юридический" style="height: 80px;"></textarea>
+        <label for="modalYur">Адрес юридический</label>
+      </div>
+      <div class="form-floating mb-2">
+        <textarea name="modalPocht" id="modalPocht" cols="30" rows="10" class="form-control formText"
+          placeholder="Адрес почтовый" style="height: 80px;"></textarea>
+        <label for="modalPocht">Адрес почтовый</label>
+      </div>
+      <button class="button button--black formBtn w-100 rounded-5 text-nowrap mt-4">
+        <svg>
+          <use xlink:href="img/icons/icons.svg#download"></use>
+        </svg>
+        <span class="text--sm text-uppercase">
+          <span class="d-none d-sm-block"> Сформировать счёт и скачать .pdf</span>
+          <span class="d-block d-sm-none"> скачать счёт</span>
+        </span>
+      </button>
+    </form>
+  </div>
+</div>
+
+<!-- modalPodpis -->
+<div class="modal" id="modalPodpis">
+
+  <div class="modalHead">
+    <button data-fancybox-close class="f-button is-close-btn" title="Close"><svg xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24" tabindex="-1">
+        <path d="M20 20L4 4m16 0L4 20"></path>
+      </svg>
+    </button>
+  </div>
+
+  <div class="modalContent">
+    <h3 class="h3 h3--sm-h5 text-uppercase text-start text-sm-center mb-3">Подписать документ</h3>
+    <div class="d-flex justify-content-start justify-content-sm-center gap-2 mb-2">
+      <div class="docIcon">
+        <svg>
+          <use xlink:href="img/icons/icons.svg#doc"></use>
+        </svg>
+      </div>
+      <span class="fw-medium text-sm-14 d-flex align-items-center">Наименование документа</span>
+    </div>
+    <div class="color--secondary text-start text--extra-sm text-sm-center mb-0 mb-lg-4 pb-3">12.01.2024</div>
+    <div class="d-flex gap-2 flex-column flex-sm-row modalPodpisBtnW">
+      <button class="button button--transparent-black rounded-5 button-gos">
+        <span class="text--sm fw-medium">С помощью Госуслуг</span>
+      </button>
+      <button class="button button--transparent-black rounded-5 button-cifro">
+        <span class="text--sm fw-medium">
+          Загрузить документ с цифровой подписью
+        </span>
+        <svg class="downloadIcon">
+          <use xlink:href="img/icons/icons.svg#download-rotate"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- vystavit schet -->
+<div class="modal" id="vystavit_schet">
+
+  <div class="modalHead">
+    <button data-fancybox-close class="f-button is-close-btn" title="Close"><svg xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24" tabindex="-1">
+        <path d="M20 20L4 4m16 0L4 20"></path>
+      </svg>
+    </button>
+  </div>
+
+  <div class="modalContent">
+    <h3 class="h3 h3--sm-h5 text-uppercase text-start text-md-center mb-4 mb-md-5">Выставить счет</h3>
+
+    <div class="form-floating mb-2">
+      <input type="text" class="form-control" id="modalorg" placeholder="Назначение платежа">
+      <label for="modalorg">Назначение платежа</label>
+    </div>
+    <div class="form-floating mb-2">
+      <input type="text" class="form-control" id="modalCena" placeholder="Цена в рублях">
+      <label for="modalCena">Цена в рублях</label>
+    </div>
+    <div class="py-2 px-0 px-md-3">
+      <button class="d-flex align-items-center gap-2" data-fancybox data-src="#calc-schet">
+        <span class="color--orange text--sm fw-semibold">Как рассчитывается стоимость медиации</span>
+        <svg class="btn-arrow-svg">
+          <use xlink:href="img/icons/icons.svg#btn-arrow"></use>
+        </svg>
+      </button>
+    </div>
+    <button class="button w-100 text--sm fw-semibold text-uppercase color--white button--black rounded-5 mt-4 mt-md-5">
+      <span>Выставить счет</span>
+    </button>
+  </div>
+</div>
+
+<!-- calc schet -->
+<div class="modal" id="calc-schet">
+
+  <div class="modalHead">
+    <button data-fancybox-close class="f-button is-close-btn" title="Close"><svg xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24" tabindex="-1">
+        <path d="M20 20L4 4m16 0L4 20"></path>
+      </svg>
+    </button>
+  </div>
+
+  <div class="modalContent">
+    <h3 class="h3 h3--sm-h5 text-uppercase text-start text-md-center mb-4 mb-md-5 calcFormTitle">калькулятор стоимости
+      медиации</h3>
+
+    <div class="mb-4">
+      <h5 class="h5 h5--sm-h6 text-uppercase text-center mb-2 pb-1">
+        Вид спора
+      </h5>
+      <div class="d-grid grid-cols-3 rounded-5 border--obvodka p-1">
+        <div class="grid-column">
+          <div class="radio-obvodka radioItem">
+            <input type="radio" checked name="sport" id="sport_1">
+            <label class="px-2" for="sport_1">
+              Семейный
+            </label>
+          </div>
+        </div>
+        <div class="grid-column">
+          <div class="radio-obvodka radioItem">
+            <input type="radio" name="sport" id="sport_2">
+            <label class="px-2" for="sport_2">
+              Бизнес
+            </label>
+          </div>
+        </div>
+        <div class="grid-column">
+          <div class="radio-obvodka radioItem">
+            <input type="radio" name="sport" id="sport_3">
+            <label class="px-2" for="sport_3">
+              Консультирование
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mb-4">
+      <h5 class="h5 h5--sm-h6 text-uppercase text-center mb-2 pb-1">
+        категория спора
+      </h5>
+      <div class="d-grid grid-cols-2 rounded-5 border--obvodka p-1">
+        <div class="grid-column">
+          <div class="radio-obvodka radioItem">
+            <input type="radio" checked name="spor" id="spor_1">
+            <label class="px-2" for="spor_1">
+              Имущественный
+            </label>
+          </div>
+        </div>
+        <div class="grid-column">
+          <div class="radio-obvodka radioItem">
+            <input type="radio" name="spor" id="spor_2">
+            <label class="px-2" for="spor_2">
+              Не имущественный
+            </label class="px-2">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mb-4">
+      <h5 class="h5 h5--sm-h6 text-uppercase text-center mb-2 pb-1">
+        Сумма спора
+      </h5>
+      <div class="d-grid grid-cols-3 rounded-5 border--obvodka p-1">
+        <div class="grid-column">
+          <div class="radio-obvodka radioItem">
+            <input type="radio" checked name="summa_spor" id="summa_spor_1">
+            <label class="px-2" for="summa_spor_1">
+              до 1 млн. <span class="d-none d-sm-inline-block">руб.</span>
+            </label class="px-2">
+          </div>
+        </div>
+        <div class="grid-column">
+          <div class="radio-obvodka radioItem">
+            <input type="radio" name="summa_spor" id="summa_spor_2">
+            <label class="px-2" for="summa_spor_2">
+              1-3 млн. <span class="d-none d-sm-inline-block">руб.</span>
+            </label class="px-2">
+          </div>
+        </div>
+        <div class="grid-column">
+          <div class="radio-obvodka radioItem">
+            <input type="radio" name="summa_spor" id="summa_spor_3">
+            <label class="px-2" for="summa_spor_3">
+              3-10 млн. <span class="d-none d-sm-inline-block">руб.</span>
+            </label class="px-2">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mb-4 mb-md-5">
+      <h5 class="h5 h5--sm-h6 text-uppercase text-center mb-2 pb-1">
+        Количество сторон в споре
+      </h5>
+      <div class="d-grid grid-cols-3 rounded-5 border--obvodka p-1">
+        <div class="grid-column">
+          <div class="radio-obvodka radioItem">
+            <input type="radio" checked name="kol_spor" id="kol_spor_1">
+            <label class="px-2" for="kol_spor_1">
+              2
+            </label class="px-2">
+          </div>
+        </div>
+        <div class="grid-column">
+          <div class="radio-obvodka radioItem">
+            <input type="radio" name="kol_spor" id="kol_spor_2">
+            <label class="px-2" for="kol_spor_2">
+              3
+            </label class="px-2">
+          </div>
+        </div>
+        <div class="grid-column">
+          <div class="radio-obvodka radioItem">
+            <input type="radio" name="kol_spor" id="kol_spor_3">
+            <label class="px-2" for="kol_spor_3">
+              >3
+            </label class="px-2">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="d-flex flex-column flex-sm-row align-items-center justify-content-end gap-4">
+      <span class="h3 fw-semibold mb-0">100 000 руб.</span>
+      <button class="button button--black text-uppercase rounded-5 text--sm width-sm-100">
+        <svg>
+          <use xlink:href="img/icons/icons.svg#two-window"></use>
+        </svg>
+        копировать сумму
+      </button>
+    </div>
+
+  </div>
+</div>
+
+<!-- prekrep -->
+<div class="modal" id="prikrep">
+
+  <div class="modalHead">
+    <button data-fancybox-close class="f-button is-close-btn" title="Close"><svg xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24" tabindex="-1">
+        <path d="M20 20L4 4m16 0L4 20"></path>
+      </svg>
+    </button>
+  </div>
+
+  <div class="modalContent">
+    <h3 class="h3 h3--sm-h5 text-uppercase text-start text-md-center mb-4 mb-md-5">Прикрепить документ</h3>
+
+    <div class="mb-4 mb-md-5">
+      <div class="form-floating">
+        <textarea name="prikrepText" id="prikrepText" cols="30" rows="10" class="form-control textarea-sm-180"
+          placeholder="Комментарий к документу"></textarea>
+        <label for="prikrepText">Комментарий к документу</label>
+      </div>
+    </div>
+
+    <div class="d-flex gap-2 prikrepBtnW flex-column flex-md-row">
+      <button class="button w-100 text--sm fw-semibold text-uppercase color--white button--black rounded-5"
+        data-fancybox data-src="#prikrep-zagruz">
+        <svg class="btn-arrow-svg">
+          <use xlink:href="img/icons/icons.svg#file"></use>
+        </svg>
+        <span>Прикрепить из загруженных</span>
+      </button>
+      <button class="button w-100 text--sm fw-semibold text-uppercase color--white button--black rounded-5"
+        data-fancybox data-src="#zagruz-i-prikrep">
+        <svg class="btn-arrow-svg">
+          <use xlink:href="img/icons/icons.svg#download-rotate"></use>
+        </svg>
+        <span>Загрузить новый документ</span>
+      </button>
+    </div>
+
+  </div>
+</div>
+
+<!-- prekrep -->
+<div class="modal" id="prikrep-zagruz">
+
+  <div class="modalHead">
+    <button data-fancybox-close class="f-button is-close-btn" title="Close"><svg xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24" tabindex="-1">
+        <path d="M20 20L4 4m16 0L4 20"></path>
+      </svg>
+    </button>
+  </div>
+
+  <div class="modalContent">
+    <h3 class="h3 h3--sm-h5 text-uppercase text-start text-md-center mb-4 mb-md-5">Прикрепить документ</h3>
+
+    <div class="mb-2 mb-md-5">
+      <div class="form-floating">
+        <textarea name="prikrepText" id="prikrepText_1" cols="30" rows="10" class="form-control textarea-sm-180"
+          placeholder="Комментарий к документу"></textarea>
+        <label for="prikrepText_1">Комментарий к документу</label>
+      </div>
+    </div>
+
+    <div class="border-b-obvodka">
+      <div
+        class="d-flex flex-column flex-md-row align-items-start align-items-md-center justify-content-between gap-0 gap-md-2">
+        <div
+          class="d-flex flex-column flex-md-row align-items-start align-items-md-center gap-2 gap-md-4 text--sm py-3">
+          <span class="color--secondary">12.01.2024</span>
+          <div class="text-sm-14 fw-sm-semibold">
+            <div class="d-flex gap-2">
+              <div class="docIcon d-block d-md-none">
+                <svg>
+                  <use xlink:href="img/icons/icons.svg#doc"></use>
+                </svg>
+              </div>
+              Квитанция об оплате госпошлины от супруги (650 руб.).
+            </div>
+          </div>
+        </div>
+        <div class="d-flex align-items-center gap-2 py-2 ml-md-auto">
+          <div class="checkIcon checkIcon--green">
+            <svg>
+              <use xlink:href="img/icons/icons.svg#check-black"></use>
+            </svg>
+          </div><!-- /checkBlack -->
+          <span class="text--sm fw-medium color--green text-nowrap">
+            Подписан
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <div class="border-b-obvodka">
+      <div
+        class="d-flex flex-column flex-md-row align-items-start align-items-md-center justify-content-between gap-0 gap-md-2">
+        <div
+          class="d-flex flex-column flex-md-row align-items-start align-items-md-center gap-2 gap-md-4 text--sm py-3">
+          <span class="color--secondary">22.01.2024</span>
+
+          <div class="text-sm-14 fw-sm-semibold">
+            <div class="d-flex gap-2">
+              <div class="docIcon d-block d-md-none">
+                <svg>
+                  <use xlink:href="img/icons/icons.svg#doc"></use>
+                </svg>
+              </div>
+              Оригинал свидетельства о браке
+            </div>
+          </div>
+        </div>
+        <div class="d-flex align-items-center gap-2 py-2 ml-md-auto">
+          <div class="checkIcon checkIcon--green">
+            <svg>
+              <use xlink:href="img/icons/icons.svg#check-black"></use>
+            </svg>
+          </div><!-- /checkBlack -->
+          <span class="text--sm fw-medium color--green text-nowrap">
+            Подписан
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <div class="border-b-obvodka">
+      <div
+        class="d-flex flex-column flex-md-row align-items-start align-items-md-center justify-content-between gap-0 gap-md-2">
+        <div
+          class="d-flex flex-column flex-md-row align-items-start align-items-md-center gap-2 gap-md-4 text--sm py-3">
+          <span class="color--secondary">22.01.2024</span>
+          <div class="text-sm-14 fw-sm-semibold">
+            <div class="d-flex gap-2">
+              <div class="docIcon d-block d-md-none">
+                <svg>
+                  <use xlink:href="img/icons/icons.svg#doc"></use>
+                </svg>
+              </div>
+              Квитанция об оплате госпошлины от супруги (650 руб.). Квитанция об
+              оплате госпошлины от супруги (650
+              руб.).
+            </div>
+          </div>
+        </div>
+        <div class="d-flex align-items-center gap-2 py-2 ml-md-auto">
+          <div class="checkIcon checkIcon--red">
+            <svg>
+              <use xlink:href="img/icons/icons.svg#remove"></use>
+            </svg>
+          </div><!-- /checkBlack -->
+          <span class="text--sm fw-medium color--red text-nowrap">
+            Не подписан
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <button class="button w-100 text--sm fw-semibold text-uppercase color--white button--orange rounded-5 mt-4 mt-md-5">
+      <svg class="btn-arrow-svg">
+        <use xlink:href="img/icons/icons.svg#file"></use>
+      </svg>
+      <span class="d-block d-md-none">Прикрепить</span>
+      <span class="d-none d-md-block">Прикрепить документ</span>
+    </button>
+
+  </div>
+</div>
+
+<!-- zagruz-i-prekrep -->
+<div class="modal" id="zagruz-i-prikrep">
+
+  <div class="modalHead">
+    <button data-fancybox-close class="f-button is-close-btn" title="Close"><svg xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24" tabindex="-1">
+        <path d="M20 20L4 4m16 0L4 20"></path>
+      </svg>
+    </button>
+  </div>
+
+  <div class="modalContent">
+    <h3 class="h3 h3--sm-h5 text-uppercase text-start text-md-center mb-4 mb-md-5">загрузить документ</h3>
+
+    <div class="mb-4 mb-md-5">
+      <div class="form-floating">
+        <textarea name="prikrepText" id="prikrepText_2" cols="30" rows="10" class="form-control textarea-sm-180"
+          placeholder="Комментарий к документу"></textarea>
+        <label for="prikrepText_2">Комментарий к документу</label>
+      </div>
+    </div>
+
+    <div class="d-flex flex-column flex-sm-row gap-2">
+      <div
+        class="fileUploadName button px-3 w-100 border--obvodka fw-normal color--secondary text-start justify-content-start">
+        Выберите файл
+      </div>
+      <input type="file" hidden id="zagruz_doc" onchange="showFile(this)">
+      <label for="zagruz_doc"
+        class="button button--black text-uppercase text--sm fw-semibold width-sm-100 d-none d-sm-flex">
+        выбрать
+      </label>
+      <label for="zagruz_doc"
+        class="button button--transparent-black text-uppercase text--sm fw-semibold width-sm-100 d-flex d-sm-none">
+        выбрать документ
+      </label>
+    </div>
+
+    <div class="agreement mt-4 mb-4 mb-md-5">
+      <input type="checkbox" id="checkbox_11" hidden>
+      <label class="d-flex gap-2" for="checkbox_11">
+        <div class="rect">
+
+        </div>
+        <div class="agreementText text-sm-14">
+          Требуется подпись
+        </div>
+      </label>
+    </div>
+
+    <button
+      class="button w-100 text--sm fw-semibold text-uppercase color--white button--orange rounded-5 mt-4 mt-md-5 d-none d-md-flex">
+      <svg class="btn-arrow-svg">
+        <use xlink:href="img/icons/icons.svg#download-rotate"></use>
+      </svg>
+      <span class="d-block d-md-none">прикрепить</span>
+      <span class="d-none d-md-block">Загрузить и прикрепить документ</span>
+    </button>
+    <button
+      class="button w-100 text--sm fw-semibold text-uppercase color--white button--orange rounded-5 mt-4 mt-md-5 d-flex d-md-none"
+      disabled>
+      <svg class="btn-arrow-svg">
+        <use xlink:href="img/icons/icons.svg#file"></use>
+      </svg>
+      <span class="d-block d-md-none">прикрепить</span>
+      <span class="d-none d-md-block">Загрузить и прикрепить документ</span>
+    </button>
+
+  </div>
+</div>
+
+<!-- admin-order -->
+<div class="modal modal--800" id="admin-order">
+
+  <div class="modalHead">
+    <button data-fancybox-close class="f-button is-close-btn" title="Close"><svg xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24" tabindex="-1">
+        <path d="M20 20L4 4m16 0L4 20"></path>
+      </svg>
+    </button>
+  </div>
+
+  <div class="modalContent">
+
+    <div
+      class="d-flex justify-content-between align-items-start align-items-lg-center gap-2 mb-5 flex-column flex-lg-row">
+      <h3 class="h3 h3--sm-h5 text-uppercase text-center mb-0">заявка</h3>
+      <span class="text--sm color--secondary">12.01.2024</span>
+    </div>
+
+    <div class="row mb-5">
+      <div class="col-lg-6 mb-4 mb-lg-0">
+        <h5 class="h5 h5--sm-h6 mb-2 text-uppercase">
+          Заявитель:
+        </h5>
+        <p>
+          Иванова София Алексеевна
+        </p>
+      </div>
+      <div class="col-lg-6">
+        <h5 class="h5 h5--sm-h6 mb-2 text-uppercase">
+          Контрагент:
+        </h5>
+        <p>
+          Иванов Иван Иванович
+        </p>
+      </div>
+    </div>
+
+    <div class="mb-5">
+      <h5 class="h5 h5--sm-h6 mb-2 text-uppercase">
+        Детали дела:
+      </h5>
+      <div class="content text-sm-14">
+        <p>
+          Об определении места жительства ребенка и порядка осуществления родительских прав родителем, проживающим
+          отдельно от ребенка; об изменении порядка общения с ребенком; о взыскании алиментов в твердой денежной сумме
+          на
+          содержание несовершеннолетнего ребенка; о лишении родительских прав, о разделе имущества, нажитого в период
+          брака);
+        </p>
+      </div>
+
+    </div>
+
+    <div class="mb-5">
+      <h5 class="h5 h5--sm-h6 mb-2 text-uppercase">
+        Назначить медиатора
+      </h5>
+      <div class="form-floating mb-2">
+        <select class="form-select formSelect" id="change_mediator" aria-label="Floating label select">
+          <option value="1">Макаров Макар Давидович</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </select>
+        <label for="change_mediator">Выбрать медиатора</label>
+      </div>
+    </div>
+
+    <div class="d-flex justify-content-between align-items-center">
+      <a class="text-uppercase text--sm fw-semibold hover--orange d-none d-lg-block" href="#">отменить </a>
+      <div class="d-flex gap-2 align-items-center mediatorChangeBtnW width-sm-100">
+        <button class="button button--transparent-black hover-black-stroke-svg width-sm-100">
+          <svg class="hover-black-stroke-svg">
+            <use xlink:href="img/icons/icons.svg#remove"></use>
+          </svg>
+          <span class="text-uppercase text--sm fw-semibold "> Отклонить</span>
+        </button>
+        <button class="button button--orange width-sm-100">
+          <svg style="stroke: #fff; stroke-width: 2px;">
+            <use xlink:href="img/icons/icons.svg#check-black"></use>
+          </svg>
+          <span class="text-uppercase text--sm fw-semibold "> Одобрить заявку</span>
+        </button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- admin-order-success -->
+<div class="modal modal--800" id="admin-order-success">
+
+  <div class="modalHead">
+    <button data-fancybox-close class="f-button is-close-btn" title="Close"><svg xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24" tabindex="-1">
+        <path d="M20 20L4 4m16 0L4 20"></path>
+      </svg>
+    </button>
+  </div>
+
+  <div class="modalContent">
+
+    <div
+      class="d-flex justify-content-between align-items-start align-items-lg-center gap-2 mb-5 flex-column flex-lg-row">
+      <div class="d-flex gap-2 gap-lg-3">
+        <h3 class="h3 h3--sm-h5 text-uppercase text-center mb-0">заявка</h3>
+        <div class="d-flex align-items-center gap-2">
+          <div class="checkIcon checkIcon--green">
+            <svg>
+              <use xlink:href="img/icons/icons.svg#check-black"></use>
+            </svg>
+          </div><!-- /checkBlack -->
+          <span class="text--sm fw-medium">
+            Одобрена
+          </span>
+        </div>
+      </div>
+      <span class="text--sm color--secondary">12.01.2024</span>
+    </div>
+
+    <div class="row mb-5">
+      <div class="col-lg-6 mb-4 mb-lg-0">
+        <h5 class="h5 h5--sm-h6 mb-2 text-uppercase">
+          Заявитель:
+        </h5>
+        <p>
+          Иванова София Алексеевна
+        </p>
+      </div>
+      <div class="col-lg-6">
+        <h5 class="h5 h5--sm-h6 mb-2 text-uppercase">
+          Контрагент:
+        </h5>
+        <p>
+          Иванов Иван Иванович
+        </p>
+      </div>
+    </div>
+
+    <div class="mb-5">
+      <h5 class="h5 h5--sm-h6 mb-2 text-uppercase">
+        Детали дела:
+      </h5>
+      <div class="content text-sm-14">
+        <p>
+          Об определении места жительства ребенка и порядка осуществления родительских прав родителем, проживающим
+          отдельно от ребенка; об изменении порядка общения с ребенком; о взыскании алиментов в твердой денежной сумме
+          на
+          содержание несовершеннолетнего ребенка; о лишении родительских прав, о разделе имущества, нажитого в период
+          брака);
+        </p>
+      </div>
+    </div>
+
+    <div class="mb-5">
+      <h5 class="h5 h5--sm-h6 mb-2 text-uppercase">
+        Назначить медиатора
+      </h5>
+      <div class="form-floating mb-2">
+        <select class="form-select formSelect" id="change_mediator" aria-label="Floating label select">
+          <option value="1">Макаров Макар Давидович</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </select>
+        <label for="change_mediator">Выбрать медиатора</label>
+      </div>
+    </div>
+
+    <div class="d-flex justify-content-between align-items-center">
+      <a class="text-uppercase text--sm fw-semibold hover--orange d-none d-lg-block" href="#">отменить </a>
+      <div class="d-flex gap-2 align-items-center mediatorChangeBtnW width-sm-100">
+        <button class="button button--transparent-black hover-black-stroke-svg width-sm-100">
+          <svg class="hover-black-stroke-svg">
+            <use xlink:href="img/icons/icons.svg#remove"></use>
+          </svg>
+          <span class="text-uppercase text--sm fw-semibold "> Отклонить</span>
+        </button>
+        <button class="button button--black width-sm-100">
+          <svg>
+            <use xlink:href="img/icons/icons.svg#check-black"></use>
+          </svg>
+          <span class="text-uppercase text--sm fw-semibold "> Сохранить</span>
+        </button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- admin-order-dissmiss -->
+<div class="modal" id="admin-order-dissmiss">
+
+  <div class="modalHead">
+    <button data-fancybox-close class="f-button is-close-btn" title="Close"><svg xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24" tabindex="-1">
+        <path d="M20 20L4 4m16 0L4 20"></path>
+      </svg>
+    </button>
+  </div>
+
+  <div class="modalContent">
+
+    <div
+      class="d-flex justify-content-between align-items-start align-items-lg-center gap-2 mb-5 flex-column flex-lg-row">
+      <div class="d-flex gap-2 gap-lg-3">
+        <h3 class="h3 h3--sm-h5 text-uppercase text-center mb-0">заявка</h3>
+        <div class="d-flex align-items-center gap-2">
+          <div class="checkIcon checkIcon--red">
+            <svg>
+              <use xlink:href="img/icons/icons.svg#remove"></use>
+            </svg>
+          </div><!-- /checkBlack -->
+          <span class="text--sm fw-medium">
+            Отклонена
+          </span>
+        </div>
+      </div>
+      <span class="text--sm color--secondary">12.01.2024</span>
+    </div>
+
+    <div class="row mb-5">
+      <div class="col-lg-6 mb-4 mb-lg-0">
+        <h5 class="h5 h5--sm-h6 mb-2 text-uppercase">
+          Заявитель:
+        </h5>
+        <p>
+          Иванова София Алексеевна
+        </p>
+      </div>
+      <div class="col-lg-6">
+        <h5 class="h5 h5--sm-h6 mb-2 text-uppercase">
+          Контрагент:
+        </h5>
+        <p>
+          Иванов Иван Иванович
+        </p>
+      </div>
+    </div>
+
+    <div class="mb-5">
+      <h5 class="h5 h5--sm-h6 mb-2 text-uppercase">
+        Детали дела:
+      </h5>
+      <p class="text-sm-14">
+        Об определении места жительства ребенка и порядка осуществления родительских прав родителем, проживающим
+        отдельно от ребенка; об изменении порядка общения с ребенком; о взыскании алиментов в твердой денежной сумме на
+        содержание несовершеннолетнего ребенка; о лишении родительских прав, о разделе имущества, нажитого в период
+        брака);
+      </p>
+    </div>
+
+    <div class="mb-5">
+      <h5 class="h5 h5--sm-h6 mb-2 text-uppercase">
+        Назначить медиатора
+      </h5>
+      <div class="form-floating mb-2">
+        <select class="form-select formSelect" id="change_mediator" aria-label="Floating label select">
+          <option value="1">Макаров Макар Давидович</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </select>
+        <label for="change_mediator">Выбрать медиатора</label>
+      </div>
+    </div>
+
+    <div class="d-flex justify-content-between align-items-center">
+      <a class="text-uppercase text--sm fw-semibold hover--orange d-none d-lg-block" href="#">отменить </a>
+      <div class="d-flex gap-2 align-items-center mediatorChangeBtnW width-sm-100">
+        <button class="button button--transparent-black hover-black-stroke-svg width-sm-100">
+          <svg class="hover-black-stroke-svg">
+            <use xlink:href="img/icons/icons.svg#remove"></use>
+          </svg>
+          <span class="text-uppercase text--sm fw-semibold "> Отклонить</span>
+        </button>
+        <button class="button button--orange width-sm-100">
+          <svg style="stroke: #fff; stroke-width: 2px;">
+            <use xlink:href="img/icons/icons.svg#check-black"></use>
+          </svg>
+          <span class="text-uppercase text--sm fw-semibold "> Одобрить заявку</span>
+        </button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- admin-mediator -->
+<div class="modal" id="admin-mediator">
+
+  <div class="modalHead">
+    <button data-fancybox-close class="f-button is-close-btn" title="Close"><svg xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24" tabindex="-1">
+        <path d="M20 20L4 4m16 0L4 20"></path>
+      </svg>
+    </button>
+  </div>
+
+  <div class="modalContent">
+
+    <h3 class="h3 h3--sm-h5 text-uppercase text-start mb-5">Медиатор</h3>
+
+    <div class="form-floating mb-2">
+      <select class="form-select formSelect" id="mediator_active" aria-label="Floating label select">
+        <option value="1">Макаров Макар Давидович</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+      </select>
+      <label for="change_mediator">Выбрать медиатора</label>
+    </div>
+
+    <div class="form-floating mb-2">
+      <input type="text" class="form-control" id="mediator_fio" placeholder="ФИО">
+      <label for="mediator_fio">ФИО</label>
+    </div>
+    <div class="form-floating mb-2">
+      <input type="email" class="form-control" id="mediator_mail" placeholder="Email">
+      <label for="mediator_mail">Email</label>
+    </div>
+    <div class="form-floating mb-4">
+      <input type="tel" class="form-control" id="mediator_phone" placeholder="Телефон">
+      <label for="mediator_phone">Телефон</label>
+    </div>
+
+    <button class="button button--orange w-100">
+      <svg style="fill: #fff; stroke: transparent;">
+        <use xlink:href="img/icons/icons.svg#karandash"></use>
+      </svg>
+      <span class="text-uppercase text--sm fw-semibold">Сохранить</span>
+    </button>
+
+  </div>
+</div>
+
+<!-- modal-info -->
+<div class="modal" id="modal-info">
+
+  <div class="modalHead">
+    <button data-fancybox-close class="f-button is-close-btn" title="Close"><svg xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24" tabindex="-1">
+        <path d="M20 20L4 4m16 0L4 20"></path>
+      </svg>
+    </button>
+  </div>
+
+  <div class="modalContent">
+
+    <h3 class="h3 h3--sm-h5 text-uppercase text-start mb-3 mb-lg-5" style="max-width: calc(100% - 50px);">Конфликтологическое консультирование</h3>
+
+    <div class="content">
+      <p>
+        Консультативная сессия, достаточно близкая к конфликтологическому консультированию, тем не менее, она имеет
+        несколько иной алгоритм.
+      </p>
+      <p>
+        Главная задача такой сессии - определение максимально эффективного, возможно не стандартного, использования
+        ресурсов для реализации поставленной задачи.
+      </p>
+      <p>
+        Данная консультация скорее посвящена реализации конкретной сложной бизнес или личной задачи, нежели ее анализу и
+        определению, как это происходит в первом случае.
+      </p>
+      <p>
+        От нескольких часов до нескольких дней.
+      </p>
+    </div>
+
+    <button data-fancybox-close title="Close" class="button button--orange mx-auto mt-3 mt-lg-5 width-sm-100" type="button">
+      <span class="text-uppercase text--sm fw-semibold">Понятно</span>
+    </button>
+
+  </div>
+</div>
+
+<script>
+  function showFile(input) {
+    let file = input.files[0];
+    let fileUploadName = document.querySelector('.fileUploadName');
+    fileUploadName.textContent = `Загружено: ${file.name}`;
+  }
+</script>
+	</div>
+	
+	<script src="js/app.min.js"></script>
+
+
+	
+</body>
+
+</html>
+
+
+
+

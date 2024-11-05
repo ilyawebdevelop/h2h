@@ -1,0 +1,16 @@
+/* Hamburger Menu */
+.hamburger {
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 56px;
+  flex-shrink: 1;
+  cursor: pointer;
+  position: relative;
+  // transition: background 0.2s linear;  
+  display: none;
+
+  @media (max-width: 1199px) {
+    display: flex;
+  }
+}

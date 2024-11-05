@@ -1,0 +1,27 @@
+.spor {
+  padding-top: 90px;
+  padding-bottom: 90px;
+  @media(max-width: 991px){
+    padding-top: 60px;
+  }
+  &Item {
+    &Icon {
+      height: 100px;
+      width: 280px;
+      object-fit: contain;   
+      margin-bottom: 50px;  
+      @media(max-width: 1199px){
+        margin-bottom: 30px;
+      }
+      @media(max-width: 767px){
+        object-position: left;
+      }
+    }
+    .h4 {
+      margin-bottom: 20px;
+    }
+    ul {
+      max-width: 320px;
+    }
+  }
+}

@@ -1,0 +1,142 @@
+// Footer
+.footer {
+  background: var(--temno-seryy);
+  
+  &T {
+    padding-top: 120px;
+    padding-bottom: 115px;
+    @media(max-width: 1400px){
+      padding-top: 80px;
+      padding-bottom: 80px;
+    }
+    @media(max-width: 991px){
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
+  }
+  &C {
+    border-bottom: 1px solid var(--seryy);
+    border-top: 1px solid var(--seryy);
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  &B {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+.contactItem{
+  display: flex;
+  column-gap: 20px;
+  margin-bottom: 30px;
+  font-size: 24px;
+  line-height: 150%;
+  letter-spacing: -0.01em;
+  position: relative;
+  z-index: 1;
+  @media(max-width: 1199px){
+    font-size: 16px;
+  }
+  a {
+    width: fit-content;
+    &:hover {
+      color: var(--krasnyy);
+    }
+    &.color--orange {
+      &:hover {
+        color: #fff!important;
+      }
+    }
+  }
+
+  &Icon {
+    position: relative;
+    bottom: 0;
+    height: fit-content;
+    @media(max-width: 1199px){
+      width: 24px;
+    }
+  }
+}
+.footerSocialsNav {
+  ul {
+    li {
+      a {
+        &:hover {
+          opacity: .8;
+        }
+      }
+    }
+  }
+}
+.footerTL {
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: -80px;
+    background: url('@img/footer/arrow-lg.svg') no-repeat center center / contain;
+    width: 680px;
+    height: 570px;
+    opacity: .3;
+    @media(max-width: 1400px){
+      width: 500px;
+      height: 600px;
+    }
+    @media(max-width: 991px){
+      width: 100%;
+      height: 300px;
+      opacity: .6;      
+    }
+    @media(max-width: 575px){
+      width: 300px;
+      left: 0;
+      right: 0;
+      margin: auto;
+      top: 60px;
+    }
+  }
+}
+.footerForm{
+  .form-control {
+    background-color: transparent;
+    border: none;
+    padding-left: 0!important;
+    color: #fff;
+    border-bottom: 1px solid rgba(247, 240, 233, 0.3);
+    border-radius: 0;
+  } 
+  .form-floating > label {
+    padding-left: 0;
+    color: #fff!important;
+    &::after {
+      background-color: transparent!important;
+      color: #fff!important;
+    }
+  }
+  .form-control + label {
+    left: -2px;
+  }
+}
+.footerLink{
+  width: fit-content;
+  &:hover {
+    color: var(--krasnyy);
+  }
+}
+.footerOrangeLink{
+  &:hover {
+    color: #fff!important;
+  }
+}
+.footerDevelop{
+  .color--white {
+    transition: color .2s linear;
+  }
+  &:hover {
+    .color--white {
+      color: var(--krasnyy);
+    }   
+  }
+}

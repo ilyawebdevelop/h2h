@@ -1,0 +1,152 @@
+<section class="sect client-order">
+  <div class="container">
+    <form action="#" class="form">
+      <h3 class="h3 text-center text-lg-start text-uppercase mb-5">
+        Оставить заявку
+      </h3>
+      <div class="border-b-obvodka border-b-sm-none pb-0 pb-lg-5">
+        <div class="row">
+          <div class="col-lg-6">
+            <h4 class="h4 mb-4 text-uppercase">
+              Мои данные
+            </h4>
+            <div class="form-floating mb-2">
+              <input type="text" class="form-control" id="fio_1" placeholder="ФИО">
+              <label for="fio_1">ФИО</label>
+            </div>
+            <div class="form-floating mb-2">
+              <input type="email" class="form-control" id="email_1" placeholder="Email">
+              <label for="email_1">Email</label>
+            </div>
+            <div class="form-floating mb-4">
+              <input type="tel" class="form-control" id="phone_1" placeholder="Телефон">
+              <label for="phone_1">Телефон</label>
+            </div>
+            <div class="agreement">
+              <input type="checkbox" id="checkbox_1" hidden>
+              <label class="d-flex gap-2" for="checkbox_1">
+                <div class="rect">
+
+                </div>
+                <div class="agreementText">
+                  Участвую от имени организации
+                </div>
+              </label>
+            </div>
+          </div>
+          <div class="col-lg-6 mt-5 mt-lg-0">
+            <h4 class="h4 mb-4 text-uppercase">
+              Данные второй стороны
+            </h4>
+            <div class="form-floating mb-2">
+              <input type="text" class="form-control" id="fio_2" placeholder="ФИО">
+              <label for="fio_2">ФИО</label>
+            </div>
+            <div class="form-floating mb-2">
+              <input type="email" class="form-control" id="email_2" placeholder="Email">
+              <label for="email_2">Email</label>
+            </div>
+            <div class="form-floating mb-4">
+              <input type="tel" class="form-control" id="phone_2" placeholder="Телефон">
+              <label for="phone_2">Телефон</label>
+            </div>
+            <div class="agreement">
+              <input type="checkbox" id="checkbox_2" hidden>
+              <label class="d-flex gap-2" for="checkbox_2">
+                <div class="rect">
+
+                </div>
+                <div class="agreementText">
+                  Контрагент представляет организацию
+                </div>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row pt-5">
+        <div class="col-lg-6">
+          <h4 class="h4 mb-4 text-uppercase">
+            Предмет спора
+          </h4>
+          <select name="spor" id="spor" class="formSelect w-100">
+            <option value="predmet_spora">Предмет спора</option>
+            <option value="value_1">Предмет спора 1</option>
+          </select>
+        </div>
+      </div>
+      <div class="border-b-obvodka border-b-sm-none pb-0 pb-lg-5">
+        <div class="row pt-5">
+          <div class="col">
+            <h4 class="h4 mb-4 text-uppercase">
+              Статус урегулирования
+            </h4>
+            <div class="radioItems flex-column flex-lg-row d-flex gap-3 gap-lg-5">
+              <div class="radioItem">
+                <input type="radio" id="radio_1" hidden checked name="status">
+                <label class="d-flex align-items-center gap-2" for="radio_1">
+                  <div class="round"></div>
+                  <div class="radioItemText">
+                    Меры не предпринимались
+                  </div>
+                </label>
+              </div>
+              <div class="radioItem">
+                <input type="radio" id="radio_2" hidden name="status">
+                <label class="d-flex align-items-center gap-2" for="radio_2">
+                  <div class="round"></div>
+                  <div class="radioItemText">
+                    Направлена претензия
+                  </div>
+                </label>
+              </div>
+              <div class="radioItem">
+                <input type="radio" id="radio_3" hidden name="status">
+                <label class="d-flex align-items-center gap-2" for="radio_3">
+                  <div class="round"></div>
+                  <div class="radioItemText">
+                    Дело находится в суде
+                  </div>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row pt-5">
+        <div class="col">
+          <h4 class="h4 mb-4 text-uppercase">
+            Детали
+          </h4>
+          <div class="form-floating mb-5">
+            <textarea name="detailText" id="detailText" cols="30" rows="10" class="form-control formText bg--white"
+              placeholder="Опишите ситуацию подробнее" style="height: 130px; "></textarea>
+            <label for="detailText">Опишите ситуацию подробнее</label>
+          </div>
+          <div class="d-flex flex-column flex-lg-row align-items-start align-items-lg-center justify-content-end gap-3">
+            <div class="agreement">
+              <input type="checkbox" id="checkbox_3" hidden>
+              <label class="d-flex gap-2" for="checkbox_3">
+                <div class="rect">
+
+                </div>
+                <div class="agreementText">
+                  Даю согласие на обработку <a class="d-inline" href="#" target="_blank">персональных данных</a> 
+                </div>
+              </label>
+            </div>
+            <button class="button button--orange text-uppercase orderBtn">
+              Отправить заявку
+              <svg>
+                <use xlink:href="img/icons/icons.svg#btn-arrow"></use>
+              </svg>    
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </form>
+  </div>
+</section>

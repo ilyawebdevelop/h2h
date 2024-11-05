@@ -1,0 +1,118 @@
+.tabs {
+  &__nav {
+    display: flex;
+    column-gap: 16px;
+    padding: 4px;
+    background-color: var(--background);
+    width: fit-content;
+    border-radius: 15px;
+    &-btn {
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;   
+     
+      font-weight: 500;
+      border-radius: 14px;
+      padding-left: 16px;
+      padding-right: 16px;
+      &--active {
+        background-color: var(--primary);
+        color: #fff;
+      }
+    }
+  }
+  &__panel {
+    display: none;
+    &--active {
+      display: block;
+    }
+  }
+}
+.sidebarTabs{
+  .tabs__nav-btn {
+    border: 2px solid transparent;
+    transition: color .2s linear;
+    &:hover {
+      color: var(--krasnyy);
+    }
+    &--active {
+      border: 2px solid var(--krasnyy);
+      color: var(--krasnyy);
+    }
+  }
+}
+
+.chatTabs {
+  .tabs__nav{
+    border-top: 1px solid var(--obvodka);
+    border-bottom: 1px solid var(--obvodka);
+    border-radius: 0;
+    width: 100%;
+    padding: 0;
+    column-gap: 0;
+  }
+  .tabs__nav-item {
+    &:nth-child(1){
+      width: 70%;
+      @media(max-width: 575px){
+        width: 50%;
+      }
+    }
+    &:nth-child(2){
+      width: 30%;
+      border-left: 1px solid var(--obvodka);
+      @media(max-width: 575px){
+        width: 50%;
+      }
+    }
+  }
+  .tabs__nav-btn {
+    border-bottom: 2px solid transparent;
+    transition: color .2s linear;
+    border-radius: 0;
+    display: flex;
+    column-gap: 8px;
+    text-transform: uppercase;
+    color: var(--secondary);
+    font-size: 14px;
+    font-weight: 600;
+    width: 100%;
+  
+ 
+    svg {
+      width: 20px;
+      height: 20px;
+      fill: var(--secondary);
+      stroke: transparent;
+    }
+    &:hover {
+      color: var(--krasnyy);
+      svg {
+        fill: var(--krasnyy);
+      }
+    }
+    &--active {
+      border-color: 2px solid var(--krasnyy);
+      color: var(--krasnyy);
+      svg {
+        fill: var(--krasnyy);
+      }
+    }
+  }
+  .chatSearch {
+    input {
+      border: 1px solid var(--obvodka);
+      border-radius: 28px;
+    }
+  }
+  .chatSearchClose {
+    border-radius: 26px;
+  }
+  .chatSearchBtn{
+    svg {
+      stroke: var(--seryy);
+      stroke-width: 1px;
+    }
+  }
+}

@@ -1,0 +1,460 @@
+<section class="sect">
+  <div class="container">
+    <div class="d-flex mb-4 mb-lg-0 align-items-center gap-2 justify-content-between">
+      <h3 class="h3 mb-0 pb-0 mb-lg-4 pb-lg-2 text-uppercase">
+        Заявки
+      </h3>
+      <div class="d-flex d-lg-none">
+        <button class="button px-2 searchBtn">
+          <svg class="svg">
+            <use xlink:href="img/icons/icons.svg#search"></use>
+          </svg>
+        </button>
+        <button class="button px-2 filterBtn">
+          <svg class="svg">
+            <use xlink:href="img/icons/icons.svg#filter"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="d-flex justify-content-between gap-3 mb-0 mb-lg-4 nav-action position-relative">
+      <div class="d-flex gap-2">
+
+        <div class="chatSearch">
+          <input class="border--obvodka formInput" type="search" placeholder="Поиск">
+          <button class="chatSearchBtn" type="button">
+            <svg class="fileSvg fileSvg--black">
+              <use xlink:href="img/icons/icons.svg#search"></use>
+            </svg>
+          </button>
+          <button class="chatSearchClose">
+            <svg class="fileSvg">
+              <use xlink:href="img/icons/icons.svg#close"></use>
+            </svg>
+          </button>
+        </div><!-- /search -->
+
+        <select class="formSelect d-none d-lg-flex" name="mediator_status" id="mediator_status">
+          <option value="0">Статус</option>
+          <option value="1">Вариант 1</option>
+          <option value="2">Вариант asdasds 2</option>
+        </select>
+      </div>
+
+      <div class="d-none d-lg-flex align-items-center gap-2">
+        <span>Сортировать по:</span>
+        <select class="formSelect" name="mediator_date" id="mediator_date">
+          <option value="0">дате</option>
+          <option value="1">Вариант 1</option>
+          <option value="2">Вариант 2</option>
+        </select>
+      </div>
+
+      <div class="filterActionMobile filterAction">
+        <select class="formSelect mb-2 w-100" name="mediator_status_mobile" id="mediator_status_mobile">
+          <option value="0">Статус</option>
+          <option value="1">Вариант 1</option>
+          <option value="2">Вариант asdasds 2</option>
+        </select>
+        <div class="d-flex flex-column flex-sm-row justify-content-end align-items-start align-items-sm-center gap-1 gap-sm-2 w-100">
+          <span class="text-sm-14">Сортировать по:</span>
+          <select class="formSelect width-sm-100" name="mediator_date" id="mediator_date">
+            <option value="0">дате</option>
+            <option value="1">Вариант 1</option>
+            <option value="2">Вариант 2</option>
+          </select>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="orderTable">
+      <div class="border-b-obvodka border-obvodka-lg-none px-2 d-none d-lg-block">
+        <div class="row pb-2">
+          <div class="col-lg-4">
+            <div class="offset-icon color--secondary text--sm">
+              Клиент
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="color--secondary text--sm">
+              Контрагент
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="d-flex gap-2 justify-content-end">
+
+              <div class="date-col text-end">
+                <div class="color--secondary text--sm">
+                  Дата
+                </div>
+              </div>
+
+              <div class="status-col text-end">
+                <div class="color--secondary text--sm">
+                  Статус
+                </div>
+              </div>
+              <div class="chatBtnName">
+                <div class="color--secondary text--sm">
+                  Чат
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="orderItem border-b-obvodka px-2">
+        <div class="row align-items-center py-3 py-lg-2">
+          <div class="col-12 d-block d-lg-none">
+            <div class="text--extra-sm color--secondary mb-2">
+              12.01.2024
+            </div>
+          </div>
+          <div class="col-12 d-block d-lg-none">
+            <div class="text--extra-sm color--secondary">
+              Клиент
+            </div>
+          </div>
+          <div class="col-lg-4">
+
+            <div class="d-flex align-items-center gap-2">
+              <a href="#">
+                <svg class="svg fill--black">
+                  <use xlink:href="img/icons/icons.svg#karandash"></use>
+                </svg>
+              </a>
+              <span class="text--sm">Зимин Кирилл Ярославович</span>
+            </div>
+          </div>
+          <div class="col-12 d-block mt-3 d-lg-none">
+            <div class="text--extra-sm color--secondary">
+              Контрагент
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <span class="text--sm">Павлова Владислава Владимировна</span>
+          </div>
+          <div class="col-lg-4">
+            <div class="d-flex align-items-center justify-content-between justify-content-lg-end gap-2 mt-2 mt-lg-0">
+
+              <div class="date-col text-end d-none d-lg-block">
+                <div class="color--secondary text--sm">
+                  12.01.2024
+                </div>
+              </div>
+
+              <div class="status-col d-flex justify-content-start justify-content-lg-end align-items-center gap-2">
+                <button class="button button--sm button--orange text--sm rounded-5 px-2 fw-medium">
+                  Принять в работу
+                </button>
+              </div>
+
+              <a class="chatBtn" href="#">
+                <svg class="svg fill--secondary">
+                  <use xlink:href="img/icons/icons.svg#message"></use>
+                </svg>
+              </a>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="orderItem border-b-obvodka px-2">
+        <div class="row align-items-center py-3 py-lg-2">
+          <div class="col-12 d-block d-lg-none">
+            <div class="text--extra-sm color--secondary mb-2">
+              12.01.2024
+            </div>
+          </div>
+          <div class="col-12 d-block d-lg-none">
+            <div class="text--extra-sm color--secondary">
+              Клиент
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="d-flex align-items-center gap-2">
+              <a href="#">
+                <svg class="svg fill--black">
+                  <use xlink:href="img/icons/icons.svg#karandash"></use>
+                </svg>
+              </a>
+              <span class="text--sm">Иванова София Алексеевна</span>
+            </div>
+          </div>
+          <div class="col-12 d-block mt-3 d-lg-none">
+            <div class="text--extra-sm color--secondary">
+              Контрагент
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <span class="text--sm">ФИО контрагента</span>
+          </div>
+          <div class="col-lg-4">
+            <div class="d-flex align-items-center justify-content-between justify-content-lg-end gap-2 mt-2 mt-lg-0">
+
+              <div class="date-col text-end d-none d-lg-block">
+                <div class="color--secondary text--sm">
+                  12.01.2024
+                </div>
+              </div>
+
+              <div class="status-col d-flex justify-content-start justify-content-lg-end align-items-center gap-2">
+                <button class="button button--sm button--orange text--sm rounded-5 px-2 fw-medium">
+                  Принять в работу
+                </button>
+              </div>
+
+              <a class="chatBtn" href="#">
+                <svg class="svg fill--secondary">
+                  <use xlink:href="img/icons/icons.svg#message"></use>
+                </svg>
+              </a>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="orderItem border-b-obvodka px-2">
+        <div class="row align-items-center py-3 py-lg-2">
+          <div class="col-12 d-block d-lg-none">
+            <div class="text--extra-sm color--secondary mb-2">
+              12.01.2024
+            </div>
+          </div>
+          <div class="col-12 d-block d-lg-none">
+            <div class="text--extra-sm color--secondary">
+              Клиент
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="d-flex align-items-center gap-2">
+              <a href="#">
+                <svg class="svg fill--black">
+                  <use xlink:href="img/icons/icons.svg#karandash"></use>
+                </svg>
+              </a>
+              <span class="text--sm">Анисимова Марианна Данииловна</span>
+            </div>
+          </div>
+          <div class="col-12 d-block mt-3 d-lg-none">
+            <div class="text--extra-sm color--secondary">
+              Контрагент
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <span class="text--sm">Хохлова Елизавета Матвеевна</span>
+          </div>
+          <div class="col-lg-4">
+            <div class="d-flex align-items-center justify-content-between justify-content-lg-end gap-2 mt-2 mt-lg-0">
+
+              <div class="date-col text-end d-none d-lg-block">
+                <div class="color--secondary text--sm">
+                  22.01.2024
+                </div>
+              </div>
+
+              <div class="status-col d-flex justify-content-start justify-content-lg-end align-items-center gap-2">
+                <div class="status-round bg--green">
+
+                </div>
+                <div class="text--sm fw-medium">
+                  В работе
+                </div>
+              </div>
+
+              <a class="chatBtn" href="#">
+                <svg class="svg fill--secondary">
+                  <use xlink:href="img/icons/icons.svg#message"></use>
+                </svg>
+              </a>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="orderItem border-b-obvodka px-2">
+        <div class="row align-items-center py-3 py-lg-2">
+          <div class="col-12 d-block d-lg-none">
+            <div class="text--extra-sm color--secondary mb-2">
+              12.01.2024
+            </div>
+          </div>
+          <div class="col-12 d-block d-lg-none">
+            <div class="text--extra-sm color--secondary">
+              Клиент
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="d-flex align-items-center gap-2">
+              <a href="#">
+                <svg class="svg fill--black">
+                  <use xlink:href="img/icons/icons.svg#karandash"></use>
+                </svg>
+              </a>
+              <span class="text--sm">Григорьев Кирилл Максимович</span>
+            </div>
+          </div>
+          <div class="col-12 d-block mt-3 d-lg-none">
+            <div class="text--extra-sm color--secondary">
+              Контрагент
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <span class="text--sm">Семенова Дарья Ярославовна</span>
+          </div>
+          <div class="col-lg-4">
+            <div class="d-flex align-items-center justify-content-between justify-content-lg-end gap-2 mt-2 mt-lg-0">
+
+              <div class="date-col text-end d-none d-lg-block">
+                <div class="color--secondary text--sm">
+                  22.01.2024
+                </div>
+              </div>
+
+              <div class="status-col d-flex justify-content-start justify-content-lg-end align-items-center gap-2">
+                <div class="status-round bg--green">
+
+                </div>
+                <div class="text--sm fw-medium">
+                  В работе
+                </div>
+              </div>
+
+              <a class="chatBtn" href="#">
+                <svg class="svg fill--secondary">
+                  <use xlink:href="img/icons/icons.svg#message"></use>
+                </svg>
+              </a>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="orderItem border-b-obvodka px-2">
+        <div class="row align-items-center py-3 py-lg-2">
+          <div class="col-12 d-block d-lg-none">
+            <div class="text--extra-sm color--secondary mb-2">
+              12.01.2024
+            </div>
+          </div>
+          <div class="col-12 d-block d-lg-none">
+            <div class="text--extra-sm color--secondary">
+              Клиент
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="d-flex align-items-center gap-2">
+              <a href="#">
+                <svg class="svg fill--black">
+                  <use xlink:href="img/icons/icons.svg#karandash"></use>
+                </svg>
+              </a>
+              <span class="text--sm">Зимин Кирилл Ярославович</span>
+            </div>
+          </div>
+          <div class="col-12 d-block mt-3 d-lg-none">
+            <div class="text--extra-sm color--secondary">
+              Контрагент
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <span class="text--sm">Иванов Иван Иванович</span>
+          </div>
+          <div class="col-lg-4">
+            <div class="d-flex align-items-center justify-content-between justify-content-lg-end gap-2 mt-2 mt-lg-0">
+
+              <div class="date-col text-end d-none d-lg-block">
+                <div class="color--secondary text--sm">
+                  22.01.2024
+                </div>
+              </div>
+
+              <div class="status-col d-flex justify-content-start justify-content-lg-end align-items-center gap-2">
+                <svg class="svg svg--sm fill--secondary">
+                  <use xlink:href="img/icons/icons.svg#cart"></use>
+                </svg>
+                <div class="text--sm fw-medium color--secondary">
+                  В архиве
+                </div>
+              </div>
+
+              <a class="chatBtn" href="#">
+                <svg class="svg fill--secondary">
+                  <use xlink:href="img/icons/icons.svg#message"></use>
+                </svg>
+              </a>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="orderItem border-b-obvodka px-2">
+        <div class="row align-items-center py-3 py-lg-2 ">
+          <div class="col-12 d-block d-lg-none">
+            <div class="text--extra-sm color--secondary mb-2">
+              12.01.2024
+            </div>
+          </div>
+          <div class="col-12 d-block d-lg-none">
+            <div class="text--extra-sm color--secondary">
+              Клиент
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="d-flex align-items-center gap-2">
+              <a href="#">
+                <svg class="svg fill--black">
+                  <use xlink:href="img/icons/icons.svg#karandash"></use>
+                </svg>
+              </a>
+              <span class="text--sm">Чернов Ярослав Маркович</span>
+            </div>
+          </div>
+          <div class="col-12 d-block mt-3 d-lg-none">
+            <div class="text--extra-sm color--secondary">
+              Контрагент
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <span class="text--sm">Фирсова Марьям Матвеевна</span>
+          </div>
+          <div class="col-lg-4">
+            <div class="d-flex align-items-center justify-content-between justify-content-lg-end gap-2 mt-2 mt-lg-0">
+
+              <div class="date-col text-end d-none d-lg-block">
+                <div class="color--secondary text--sm">
+                  22.01.2024
+                </div>
+              </div>
+
+              <div class="status-col d-flex justify-content-start justify-content-lg-end align-items-center gap-2">
+                <svg class="svg svg--sm fill--secondary">
+                  <use xlink:href="img/icons/icons.svg#cart"></use>
+                </svg>
+                <div class="text--sm fw-medium color--secondary">
+                  В архиве
+                </div>
+              </div>
+
+              <a class="chatBtn" href="#">
+                <svg class="svg fill--secondary">
+                  <use xlink:href="img/icons/icons.svg#message"></use>
+                </svg>
+              </a>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="paginationW mt-4">
+      @@include('../components/pagination.html',{})
+    </div>
+
+  </div>
+</section>

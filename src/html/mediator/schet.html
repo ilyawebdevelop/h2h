@@ -1,0 +1,565 @@
+<section class="sect">
+  <div class="container">
+    <div class="d-flex mb-4 mb-lg-0 align-items-center gap-2 justify-content-between">
+      <h3 class="h3 mb-0 pb-0 mb-lg-4 pb-lg-2 text-uppercase">
+        Оплаты
+      </h3>
+      <div class="d-flex d-lg-none">
+        <button class="button px-2 searchBtn">
+          <svg class="svg">
+            <use xlink:href="img/icons/icons.svg#search"></use>
+          </svg>
+        </button>
+        <button class="button px-2 filterBtn">
+          <svg class="svg">
+            <use xlink:href="img/icons/icons.svg#filter"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div class="d-flex justify-content-between gap-3 mb-0 mb-lg-4 nav-action position-relative flex-column flex-xl-row">
+      <div class="d-flex gap-2">
+
+        <div class="chatSearch">
+          <input class="border--obvodka formInput" type="search" placeholder="Поиск">
+          <button class="chatSearchBtn" type="button">
+            <svg class="fileSvg fileSvg--black">
+              <use xlink:href="img/icons/icons.svg#search"></use>
+            </svg>
+          </button>
+          <button class="chatSearchClose">
+            <svg class="fileSvg">
+              <use xlink:href="img/icons/icons.svg#close"></use>
+            </svg>
+          </button>
+        </div><!-- /search -->
+        <select class="formSelect d-none d-lg-flex" name="mediator_type_pay" id="mediator_type_pay">
+          <option value="0">Тип оплаты</option>
+          <option value="1">Вариант 1</option>
+          <option value="2">Вариант asdasds 2</option>
+        </select>
+        <select class="formSelect d-none d-lg-flex" name="mediator_status" id="mediator_status">
+          <option value="0">Статус</option>
+          <option value="1">Вариант 1</option>
+          <option value="2">Вариант asdasds 2</option>
+        </select>
+      </div>
+
+      <div class="d-none d-lg-flex align-items-center gap-2">
+        <span>Сортировать по:</span>
+        <select class="formSelect" name="mediator_date" id="mediator_date">
+          <option value="0">дате</option>
+          <option value="1">Вариант 1</option>
+          <option value="2">Вариант 2</option>
+        </select>
+      </div>
+
+      <div class="filterActionMobile filterAction">
+        <select class="formSelect mb-2 w-100" name="mediator_type_pay_mobile" id="mediator_type_pay_mobile">
+          <option value="0">Тип оплаты</option>
+          <option value="1">Вариант 1</option>
+          <option value="2">Вариант asdasds 2</option>
+        </select>
+        <select class="formSelect mb-2 w-100" name="mediator_status_mobile" id="mediator_status_mobile">
+          <option value="0">Статус</option>
+          <option value="1">Вариант 1</option>
+          <option value="2">Вариант asdasds 2</option>
+        </select>
+        <div
+          class="d-flex flex-column flex-sm-row justify-content-end align-items-start align-items-sm-center gap-1 gap-sm-2 w-100">
+          <span class="text-sm-14">Сортировать по:</span>
+          <select class="formSelect width-sm-100" name="mediator_date" id="mediator_date">
+            <option value="0">дате</option>
+            <option value="1">Вариант 1</option>
+            <option value="2">Вариант 2</option>
+          </select>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="orderTable">
+      <div class="border-b-obvodka px-2 d-none d-lg-block">
+        <div class="row pb-2">
+          <div class="col-lg-6 col-xl-7">
+
+            <div class="d-flex gap-2">
+              <div class="color--secondary text--sm way-col">
+                Способ оплаты
+              </div>
+              <div class="color--secondary text--sm client-col">
+                Клиент
+              </div>
+              <div class="color--secondary text--sm client-col">
+                Назначение платежа
+              </div>
+            </div>
+
+          </div>
+          <div class="col-lg-6 col-xl-5">
+
+            <div class="d-flex gap-2 justify-content-end">
+              <div class="price-col text-end">
+                <div class="color--secondary text--sm">
+                  Сумма
+                </div>
+              </div>
+              <div class="date-col text-end">
+                <div class="color--secondary text--sm">
+                  Дата
+                </div>
+              </div>
+              <div class="status-col text-end offset-icon-right-50">
+                <div class="color--secondary text--sm">
+                  Статус
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+      <div class="border-b-obvodka orderItem px-2">
+        <div class="row align-items-center py-3 py-lg-2">
+          <div class="col-12 d-block d-lg-none">
+            <div class="text--extra-sm color--secondary mb-3">
+              12.01.2024
+            </div>
+          </div>
+          <div class="col-12 d-block d-lg-none">
+            <div class="text--extra-sm color--secondary">
+              Клиент
+            </div>
+          </div>
+          <div class="col-lg-7">
+            <div class="d-flex align-items-start align-items-lg-center gap-3 gap-lg-2 flex-column flex-lg-row mb-2 mb-lg-0">
+
+              <div class="d-flex flex-column-reverse order-4 order-lg-1">
+                <div class="text--extra-sm color--secondary d-block d-lg-none order-3 order-lg-3">
+                  Способ оплаты
+                </div>
+                <a href="#" class="d-flex gap-2 bill-download way-col" download>
+                  <span class="color--orange text--sm text--sm-14 fw-medium">Счёт №12345</span>
+                  <svg>
+                    <use xlink:href="img/icons/icons.svg#download-orange"></use>
+                  </svg>
+                </a>
+              </div>
+
+              <div class="client-col order-1 order-2">
+                <div class="text--sm text--sm-14">Павлова Владислава Владимировна</div>
+              </div>
+              <div class="client-col order-2">
+                <div class="text--extra-sm color--secondary d-block d-lg-none">
+                  Назначение платежа
+                </div>
+                <div class="text--sm text--sm-14">Авансовая оплата по договору</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-5">
+            <div class="d-flex align-items-center  justify-content-between justify-content-lg-end gap-2">
+
+              <div class="date-col text-start text-lg-end">
+                <div class="text--sm text--sm-14 fw-sm-medium">
+                  100 000 руб.
+                </div>
+              </div>
+
+              <div class="date-col text-end d-none d-lg-block">
+                <div class="color--secondary text--sm">
+                  12.01.2024
+                </div>
+              </div>
+
+              <div class="status-col d-flex justify-content-end align-items-center gap-2 pr-8">
+                <div class="d-flex align-items-center gap-3">
+                  <span class="text--sm text--sm-14 fw-medium">Не оплачен</span>
+                  <div class="radioRound pe-none">
+                    <input type="checkbox" id="radio_1">
+                    <label for="radio_1">
+
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <button class="contextMenuBtn hover-orange-fill-svg" type="button">
+                <svg>
+                  <use xlink:href="img/icons/icons.svg#context-menu-vertical"></use>
+                </svg>
+              </button>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="border-b-obvodka orderItem px-2">
+        <div class="row align-items-center py-3 py-lg-2">
+          <div class="col-12 d-block d-lg-none">
+            <div class="text--extra-sm color--secondary mb-3">
+              12.01.2024
+            </div>
+          </div>
+          <div class="col-12 d-block d-lg-none">
+            <div class="text--extra-sm color--secondary">
+              Клиент
+            </div>
+          </div>
+          <div class="col-lg-7">
+            <div class="d-flex align-items-start align-items-lg-center gap-3 gap-lg-2 flex-column flex-lg-row mb-2 mb-lg-0">
+              <div class="d-flex flex-column-reverse order-4 order-lg-1">
+                <div class="text--extra-sm color--secondary d-block d-lg-none order-3 order-lg-3">
+                  Способ оплаты
+                </div>
+                <div class="way-col">
+                  <span class="text--sm text--sm-14 color--secondary fw-medium">Не определён</span>
+                </div>
+              </div>
+
+              <div class="client-col order-1 order-2">
+                <div class="text--sm text--sm-14">Кузнецов Кирилл Кириллович</div>
+              </div>
+              <div class="client-col order-2">
+                <div class="text--extra-sm color--secondary d-block d-lg-none">
+                  Назначение платежа
+                </div>
+                <div class="text--sm text--sm-14">Авансовая оплата по договору</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-5">
+            <div class="d-flex align-items-center  justify-content-between justify-content-lg-end gap-2">
+
+              <div class="date-col text-start text-lg-end">
+                <div class="text--sm text--sm-14 fw-sm-medium">
+                  100 000 руб.
+                </div>
+              </div>
+
+              <div class="date-col text-end d-none d-lg-block">
+                <div class="color--secondary text--sm">
+                  22.01.2024
+                </div>
+              </div>
+
+              <div class="status-col d-flex justify-content-end align-items-center gap-2 pr-8">
+                <div class="d-flex align-items-center gap-3">
+                  <span class="text--sm fw-medium text--sm-14">Олачен</span>
+                  <div class="radioRound pe-none">
+                    <input type="checkbox" id="radio_2" checked>
+                    <label for="radio_2">
+
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <button class="contextMenuBtn hover-orange-fill-svg" type="button">
+                <svg>
+                  <use xlink:href="img/icons/icons.svg#context-menu-vertical"></use>
+                </svg>
+              </button>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="border-b-obvodka orderItem px-2">
+        <div class="row align-items-center py-3 py-lg-2">
+          <div class="col-12 d-block d-lg-none">
+            <div class="text--extra-sm color--secondary mb-3">
+              12.01.2024
+            </div>
+          </div>
+          <div class="col-12 d-block d-lg-none">
+            <div class="text--extra-sm color--secondary">
+              Клиент
+            </div>
+          </div>
+          <div class="col-lg-7">
+            <div class="d-flex align-items-start align-items-lg-center gap-3 gap-lg-2 flex-column flex-lg-row mb-2 mb-lg-0">
+              <div class="d-flex flex-column-reverse order-4 order-lg-1">
+                <div class="text--extra-sm color--secondary d-block d-lg-none order-3 order-lg-3">
+                  Способ оплаты
+                </div>
+                <div class="way-col">
+                  <span class="text--sm text--sm-14 fw-medium">Оплата онлайн</span>
+                </div>
+              </div>
+
+              <div class="client-col order-1 order-2">
+                <div class="text--sm text--sm-14">Кузнецов Кирилл Кириллович</div>
+              </div>
+              <div class="client-col order-2">
+                <div class="text--extra-sm color--secondary d-block d-lg-none">
+                  Назначение платежа
+                </div>
+                <div class="text--sm text--sm-14">Авансовая оплата по договору</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-5">
+            <div class="d-flex align-items-center  justify-content-between justify-content-lg-end gap-2">
+
+              <div class="date-col text-start text-lg-end">
+                <div class="text--sm text--sm-14 fw-sm-medium">
+                  250 000 руб.
+                </div>
+              </div>
+
+              <div class="date-col text-end d-none d-lg-block">
+                <div class="color--secondary text--sm">
+                  22.01.2024
+                </div>
+              </div>
+
+              <div class="status-col d-flex justify-content-end align-items-center gap-2 pr-8">
+                <div class="d-flex align-items-center gap-2">
+                  <div class="checkIcon checkIcon--green">
+                    <svg>
+                      <use xlink:href="img/icons/icons.svg#check-black"></use>
+                    </svg>
+                  </div><!-- /checkBlack -->
+                  <span class="text--sm text--sm-14 fw-medium color--green">
+                    Оплачен онлайн
+                  </span>
+                </div>
+              </div>
+
+              <button class="contextMenuBtn hover-orange-fill-svg" type="button">
+                <svg>
+                  <use xlink:href="img/icons/icons.svg#context-menu-vertical"></use>
+                </svg>
+              </button>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="border-b-obvodka orderItem px-2">
+        <div class="row align-items-center py-3 py-lg-2">
+          <div class="col-12 d-block d-lg-none">
+            <div class="text--extra-sm color--secondary mb-3">
+              12.01.2024
+            </div>
+          </div>
+          <div class="col-12 d-block d-lg-none">
+            <div class="text--extra-sm color--secondary">
+              Клиент
+            </div>
+          </div>
+          <div class="col-lg-7">
+            <div class="d-flex align-items-start align-items-lg-center gap-3 gap-lg-2 flex-column flex-lg-row mb-2 mb-lg-0">
+              <div class="d-flex flex-column-reverse order-4 order-lg-1">
+                <div class="text--extra-sm color--secondary d-block d-lg-none order-3 order-lg-3">
+                  Способ оплаты
+                </div>
+                <a href="#" class="d-flex gap-2 bill-download way-col" download>
+                  <span class="color--orange text--sm text--sm-14 fw-medium">Счёт №12345</span>
+                  <svg>
+                    <use xlink:href="img/icons/icons.svg#download-orange"></use>
+                  </svg>
+                </a>
+              </div>
+
+              <div class="client-col order-1 order-2">
+                <div class="text--sm text--sm-14">Павлова Владислава Владимировна</div>
+              </div>
+              <div class="client-col order-2">
+                <div class="text--extra-sm color--secondary d-block d-lg-none">
+                  Назначение платежа
+                </div>
+                <div class="text--sm text--sm-14">Авансовая оплата по договору</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-5">
+            <div class="d-flex align-items-center  justify-content-between justify-content-lg-end gap-2">
+
+              <div class="date-col text-start text-lg-end">
+                <div class="text--sm text--sm-14 fw-sm-medium">
+                  100 000 руб.
+                </div>
+              </div>
+
+              <div class="date-col text-end d-none d-lg-block">
+                <div class="color--secondary text--sm">
+                  12.01.2024
+                </div>
+              </div>
+
+              <div class="status-col d-flex justify-content-end align-items-center gap-2 pr-8">
+                <div class="d-flex align-items-center gap-3">
+                  <span class="text--sm fw-medium text--sm-14">Не оплачен</span>
+                  <div class="radioRound pe-none">
+                    <input type="checkbox" id="radio_1">
+                    <label for="radio_1">
+
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <button class="contextMenuBtn hover-orange-fill-svg" type="button">
+                <svg>
+                  <use xlink:href="img/icons/icons.svg#context-menu-vertical"></use>
+                </svg>
+              </button>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="border-b-obvodka orderItem px-2">
+        <div class="row align-items-center py-3 py-lg-2">
+          <div class="col-12 d-block d-lg-none">
+            <div class="text--extra-sm color--secondary mb-3">
+              12.01.2024
+            </div>
+          </div>
+          <div class="col-12 d-block d-lg-none">
+            <div class="text--extra-sm color--secondary">
+              Клиент
+            </div>
+          </div>
+          <div class="col-lg-7">
+            <div class="d-flex align-items-start align-items-lg-center gap-3 gap-lg-2 flex-column flex-lg-row mb-2 mb-lg-0">
+              <div class="d-flex flex-column-reverse order-4 order-lg-1">
+                <div class="text--extra-sm color--secondary d-block d-lg-none order-3 order-lg-3">
+                  Способ оплаты
+                </div>
+                <div class="way-col">
+                  <span class="text--sm text--sm-14 color--secondary fw-medium">Не определён</span>
+                </div>
+              </div>
+
+              <div class="client-col order-1 order-2">
+                <div class="text--sm text--sm-14">Кузнецов Кирилл Кириллович</div>
+              </div>
+              <div class="client-col order-2">
+                <div class="text--extra-sm color--secondary d-block d-lg-none">
+                  Назначение платежа
+                </div>
+                <div class="text--sm text--sm-14">Авансовая оплата по договору</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-5">
+            <div class="d-flex align-items-center  justify-content-between justify-content-lg-end gap-2">
+
+              <div class="date-col text-start text-lg-end">
+                <div class="text--sm text--sm-14 fw-sm-medium">
+                  100 000 руб.
+                </div>
+              </div>
+
+              <div class="date-col text-end d-none d-lg-block">
+                <div class="color--secondary text--sm">
+                  22.01.2024
+                </div>
+              </div>
+
+              <div class="status-col d-flex justify-content-end align-items-center gap-2 pr-8">
+                <div class="d-flex align-items-center gap-3">
+                  <span class="text--sm fw-medium text--sm-14">Олачен</span>
+                  <div class="radioRound pe-none">
+                    <input type="checkbox" id="radio_2" checked>
+                    <label for="radio_2">
+
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <button class="contextMenuBtn hover-orange-fill-svg" type="button">
+                <svg>
+                  <use xlink:href="img/icons/icons.svg#context-menu-vertical"></use>
+                </svg>
+              </button>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="border-b-obvodka orderItem px-2">
+        <div class="row align-items-center py-3 py-lg-2">
+          <div class="col-12 d-block d-lg-none">
+            <div class="text--extra-sm color--secondary mb-3">
+              12.01.2024
+            </div>
+          </div>
+          <div class="col-12 d-block d-lg-none">
+            <div class="text--extra-sm color--secondary">
+              Клиент
+            </div>
+          </div>
+          <div class="col-lg-7">
+            <div class="d-flex align-items-start align-items-lg-center gap-3 gap-lg-2 flex-column flex-lg-row mb-2 mb-lg-0">
+              <div class="d-flex flex-column-reverse order-4 order-lg-1">
+                <div class="text--extra-sm color--secondary d-block d-lg-none order-3 order-lg-3">
+                  Способ оплаты
+                </div>
+                <div class="way-col">
+                  <span class="text--sm fw-medium text--sm-14">Оплата онлайн</span>
+                </div>
+              </div>
+            
+              <div class="client-col order-1 order-2">
+                <div class="text--sm text--sm-14">Кузнецов Кирилл Кириллович</div>
+              </div>
+              <div class="client-col order-2">
+                <div class="text--extra-sm color--secondary d-block d-lg-none">
+                  Назначение платежа
+                </div>
+                <div class="text--sm text--sm-14">Авансовая оплата по договору</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-5">
+            <div class="d-flex align-items-center  justify-content-between justify-content-lg-end gap-2">
+
+              <div class="date-col text-start text-lg-end">
+                <div class="text--sm text--sm-14 fw-sm-medium">
+                  250 000 руб.
+                </div>
+              </div>
+
+              <div class="date-col text-end d-none d-lg-block">
+                <div class="color--secondary text--sm">
+                  22.01.2024
+                </div>
+              </div>
+
+              <div class="status-col d-flex justify-content-end align-items-center gap-2 pr-8">
+                <div class="d-flex align-items-center gap-2">
+                  <div class="checkIcon checkIcon--green">
+                    <svg>
+                      <use xlink:href="img/icons/icons.svg#check-black"></use>
+                    </svg>
+                  </div><!-- /checkBlack -->
+                  <span class="text--sm text--sm-14 fw-medium color--green">
+                    Оплачен онлайн
+                  </span>
+                </div>
+              </div>
+
+              <button class="contextMenuBtn hover-orange-fill-svg" type="button">
+                <svg>
+                  <use xlink:href="img/icons/icons.svg#context-menu-vertical"></use>
+                </svg>
+              </button>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="paginationW mt-4">
+        @@include('../components/pagination.html',{})
+      </div>
+
+    </div>
+  </div>
+</section>

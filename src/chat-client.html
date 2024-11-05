@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/head.html',{
+"title":"Чат клиента"
+})
+
+<body>
+	
+	<div class="wrapper bg--svetlo-seryy chatClient">
+		@@include('html/header-client.html',{})
+		<main class="main">		
+			@@include('html/client/chat.html',{})
+		</main>
+
+		@@include('html/modal.html',{})
+	</div>
+	
+	<script src="js/app.min.js"></script>
+
+
+	
+</body>
+
+</html>
+
+
+
+

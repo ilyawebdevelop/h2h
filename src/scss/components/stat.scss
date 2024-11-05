@@ -1,0 +1,8 @@
+.stat-card {
+  padding: 16px 20px;
+  border-radius: 20px;
+  min-height: 140px;
+  @media(max-width: 575px){
+    min-height: 100px;
+  }
+}

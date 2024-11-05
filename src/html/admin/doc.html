@@ -1,0 +1,297 @@
+<section class="sect">
+  <div class="container">
+    <div class="d-flex mb-4 mb-lg-0 align-items-center gap-2 justify-content-between">
+      <h3 class="h3 mb-0 pb-0 mb-lg-4 pb-lg-2 text-uppercase">
+        Документы
+      </h3>
+      <div class="d-flex d-lg-none">
+        <button class="button px-2 searchBtn">
+          <svg class="svg">
+            <use xlink:href="img/icons/icons.svg#search"></use>
+          </svg>
+        </button>
+        <button class="button px-2 filterSmBtn">
+          <svg class="svg">
+            <use xlink:href="img/icons/icons.svg#filter"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div class="d-flex justify-content-between gap-3 mb-0 mb-lg-4 nav-action position-relative">
+      <div class="d-flex align-items-center gap-3 filterW">
+
+        <div class="chatSearch">
+          <input class="border--obvodka formInput" type="search" placeholder="Поиск">
+          <button class="chatSearchBtn" type="button">
+            <svg class="fileSvg fileSvg--black">
+              <use xlink:href="img/icons/icons.svg#search"></use>
+            </svg>
+          </button>
+          <button class="chatSearchClose">
+            <svg class="fileSvg">
+              <use xlink:href="img/icons/icons.svg#close"></use>
+            </svg>
+          </button>
+        </div><!-- /search -->
+
+        <button class="filterBtn justify-content-center d-none d-lg-flex align-items-center">
+          <svg class="svg stroke--secondary">
+            <use xlink:href="img/icons/icons.svg#filter"></use>
+          </svg>
+        </button>
+
+        @@include('../filter-action.html',{})
+
+      </div>
+
+      <div class="d-none d-lg-flex align-items-center gap-2">
+        <span>Сортировать по:</span>
+        <select class="formSelect" name="mediator_date" id="mediator_date">
+          <option value="0">дате</option>
+          <option value="1">Вариант 1</option>
+          <option value="2">Вариант 2</option>
+        </select>
+      </div>
+
+    </div>
+
+    <div class="orderTable">
+      <div class="border-b-obvodka px-2 d-none d-lg-block">
+        <div class="row pb-2">
+          <div class="col-lg-8">
+            <div class="d-flex gap-2">
+              <div class="offset-icon-left-30 color--secondary doc-col text--sm">
+                Наименование документа
+              </div>
+              <div class="color--secondary text--sm client-col">
+                Медиатор
+              </div>
+              <div class="color--secondary text--sm client-col">
+                Клиент
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="d-flex justify-content-end gap-2">
+
+              <div class="date-col text-end">
+                <div class="color--secondary text--sm">
+                  Дата
+                </div>
+              </div>
+
+              <div class="status-col text-end offset-icon-right">
+                <div class="color--secondary text--sm">
+                  Статус
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="border-b-obvodka orderItem px-2">
+        <div class="row align-items-center py-3 py-lg-2">
+          <div class="col-12 d-block d-lg-none">
+            <div class="text--extra-sm color--secondary mb-3">
+              12.01.2024
+            </div>
+          </div>
+          <div class="col-lg-8">
+            <div class="d-flex align-items-start align-items-lg-center gap-3 gap-lg-2 flex-column flex-lg-row">
+              <div class="d-flex gap-2 align-items-start align-items-lg-center">
+                <a class="hover-orange-fill-svg" href="#" download="">
+                  <svg class="svg fill--black">
+                    <use xlink:href="img/icons/icons.svg#doc"></use>
+                  </svg>
+                </a>
+                <a class="text--sm hover--orange doc-col fw-sm-semibold text--sm-14" href="#" download="">Квитанция об
+                  оплате госпошлины от супруги
+                  (650
+                  руб.).
+                </a>
+              </div>
+
+              <div class="text--sm client-col text--sm-14">
+                <div class="text--extra-sm color--secondary d-block d-lg-none">
+                  Клиент
+                </div>
+                Смирнова Мария Михайловна
+              </div>
+              <div class="text--sm client-col text--sm-14">
+                <div class="text--extra-sm color--secondary d-block d-lg-none">
+                  Медиатор
+                </div>
+                Иванова София Алексеевна
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="d-flex align-items-center justify-content-between justify-content-lg-end gap-2 mt-2 mt-lg-0">
+
+              <div class="date-col text-end d-none d-lg-block">
+                <div class="color--secondary text--sm">
+                  12.01.2024
+                </div>
+              </div>
+
+              <div class="status-col d-flex justify-content-start justify-content-lg-end align-items-center gap-2">
+                <div class="d-flex align-items-center gap-2 py-2">
+                  <div class="checkIcon checkIcon--green">
+                    <svg>
+                      <use xlink:href="img/icons/icons.svg#check-black"></use>
+                    </svg>
+                  </div><!-- /checkBlack -->
+                  <span class="text--sm fw-medium color--green text-sm-14">
+                    Подписан
+                  </span>
+                </div>
+              </div>
+
+              <a class="chatBtn" href="#">
+                <svg class="svg stroke--secondary">
+                  <use xlink:href="img/icons/icons.svg#delete"></use>
+                </svg>
+              </a>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="border-b-obvodka orderItem px-2">
+        <div class="row align-items-center py-3 py-lg-2">
+          <div class="col-12 d-block d-lg-none">
+            <div class="text--extra-sm color--secondary mb-3">
+              12.01.2024
+            </div>
+          </div>
+          <div class="col-lg-8">
+            <div class="d-flex align-items-start align-items-lg-center gap-3 gap-lg-2 flex-column flex-lg-row">
+              <div class="d-flex gap-2 align-items-start align-items-lg-center">
+                <a class="hover-orange-fill-svg" href="#" download="">
+                  <svg class="svg fill--black">
+                    <use xlink:href="img/icons/icons.svg#doc"></use>
+                  </svg>
+                </a>
+                <a class="text--sm hover--orange doc-col fw-sm-semibold text--sm-14" href="#" download="">Квитанция об
+                  оплате госпошлины от супруги
+                  (650
+                  руб.).
+                </a>
+              </div>
+              <div class="text--sm client-col text--sm-14">
+                <div class="text--extra-sm color--secondary d-block d-lg-none">
+                  Клиент
+                </div>
+                Комаров Илья Андреевич
+              </div>
+              <div class="text--sm client-col text--sm-14">
+                <div class="text--extra-sm color--secondary d-block d-lg-none">
+                  Медиатор
+                </div>
+                Кузнецов Кирилл Кириллович
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="d-flex align-items-center justify-content-between justify-content-lg-end gap-2 mt-2 mt-lg-0">
+
+
+              <div class="date-col text-end d-none d-lg-block">
+                <div class="color--secondary text--sm">
+                  12.01.2024
+                </div>
+              </div>
+
+              <div class="status-col d-flex justify-content-start justify-content-lg-end align-items-center gap-2">
+                <div class="d-flex align-items-center gap-2 py-2">
+                  <div class="checkIcon checkIcon--red">
+                    <svg>
+                      <use xlink:href="img/icons/icons.svg#remove"></use>
+                    </svg>
+                  </div><!-- /checkBlack -->
+                  <span class="text--sm fw-medium color--red text-sm-14">
+                    Не подписан
+                  </span>
+                </div>
+              </div>
+
+              <a class="chatBtn" href="#">
+                <svg class="svg stroke--secondary">
+                  <use xlink:href="img/icons/icons.svg#delete"></use>
+                </svg>
+              </a>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="border-b-obvodka orderItem px-2">
+        <div class="row align-items-center py-3 py-lg-2">
+          <div class="col-12 d-block d-lg-none">
+            <div class="text--extra-sm color--secondary mb-3">
+              12.01.2024
+            </div>
+          </div>
+          <div class="col-lg-8">
+            <div class="d-flex align-items-start align-items-lg-center gap-3 gap-lg-2 flex-column flex-lg-row">
+              <div class="d-flex gap-2 align-items-start align-items-lg-center">
+                <a class="hover-orange-fill-svg" href="#" download="#">
+                  <svg class="svg fill--black">
+                    <use xlink:href="img/icons/icons.svg#doc"></use>
+                  </svg>
+                </a>
+                <a class="text--sm hover--orange doc-col fw-sm-semibold text--sm-14" href="#" download="#">
+                  Оригинал свидетельства о браке
+                </a>
+              </div>
+              <div class="text--sm client-col text--sm-14">
+                <div class="text--extra-sm color--secondary d-block d-lg-none">
+                  Клиент
+                </div>
+                Комаров Илья Андреевич
+              </div>
+              <div class="text--sm client-col text--sm-14">
+                <div class="text--extra-sm color--secondary d-block d-lg-none">
+                  Медиатор
+                </div>
+                Кузнецов Кирилл Кириллович
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="d-flex align-items-center justify-content-between justify-content-lg-end gap-2 mt-2 mt-lg-0">
+
+              <div class="date-col text-end d-none d-lg-block">
+                <div class="color--secondary text--sm">
+                  22.01.2024
+                </div>
+              </div>
+
+              <div class="status-col d-flex justify-content-start justify-content-lg-end align-items-center gap-2">
+                <div class="d-flex align-items-center gap-2 py-2">
+                  <span class="text--sm fw-medium color--secondary text--sm-14">
+                    Подпись не требуется
+                  </span>
+                </div>
+              </div>
+
+              <a class="chatBtn" href="#">
+                <svg class="svg stroke--secondary">
+                  <use xlink:href="img/icons/icons.svg#delete"></use>
+                </svg>
+              </a>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="paginationW mt-4">
+        @@include('../components/pagination.html',{})
+      </div>
+
+    </div>
+  </div>
+</section>

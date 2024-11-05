@@ -1,0 +1,37 @@
+// Colors
+$main-color: #353535;
+
+// Fonts
+$font-family: 'Montserrat', sans-serif;
+
+// Font-weights
+$light: 300;
+$regular: 400;
+$medium: 500;
+$semibold: 600;
+$bold: 700;
+$extrabold: 800;
+$black: 900;
+
+// Containers
+:root {
+  --font-family: "Montserrat", sans-serif;
+  --second-family: "Inter", sans-serif;
+  --third-family: "Font Awesome 6 Free", sans-serif; 
+  --container-offset: 15px;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+  --container-fluid-width: calc(var(--content-fluid-width) + (var(--container-offset) * 2));
+  --krasnyy: #ff3701;
+  --bezhevyy: #f7f0e9;
+  --seryy: #353535;
+  --secondary: #808080;
+  --belyy: #fff;
+  --svetlo-seryy: #fafafa;
+  --fon-svetloy-knopki: #f0f0f0;
+  --obvodka: #e5e2e2;
+  --obvodka-2: #4d4645;
+  --temno-seryy: #131313;
+  --green: #35c828;
+  --red: #e91919;
+  --disabled: #eaeaea;
+}
