@@ -16193,7 +16193,7 @@ a.bill-download svg {
 @media (max-width: 991px) {
   .header {
     position: fixed;
-    z-index: 2;
+    z-index: 3;
     width: 100%;
     top: 0;
     background-color: #fff;
