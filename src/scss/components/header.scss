@@ -1,5 +1,12 @@
 // Header
 .header {
+  @media(max-width: 991px){
+    position: fixed;
+    z-index: 2;    
+    width: 100%;
+    top: 0;
+    background-color: #fff;
+  }
   &--black {
     background-color: var(--seryy);
     padding-top: 12px;

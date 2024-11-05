@@ -116,6 +116,12 @@ section {
   min-height: 100%;
   position: relative;
   background-color: #fff;
+  @media(max-width: 991px){
+    padding-top: 89px;
+  }
+  @media(max-width: 575px){
+    padding-top: 74px;
+  }
 }
 
 .main {
@@ -192,7 +198,7 @@ section {
   }
 
   &--secondary {
-    color: var(--secondary)!important;
+    color: var(--secondary) !important;
   }
 
   &--green {
@@ -217,7 +223,8 @@ section {
     }
   }
 }
-.border-b-krasnyy{
+
+.border-b-krasnyy {
   text-decoration: underline;
   text-underline-offset: 3px;
   text-decoration-thickness: 1px;
@@ -244,19 +251,19 @@ section {
 
 a.color--orange {
   &:hover {
-    color: var(--seryy)!important;
+    color: var(--seryy) !important;
   }
 }
 
 a.color--secondary {
   &:hover {
-    color: var(--krasnyy)!important;
+    color: var(--krasnyy) !important;
   }
 }
 
 a.hover--orange {
   &:hover {
-    color: var(--krasnyy)!important;
+    color: var(--krasnyy) !important;
   }
 }
 
@@ -390,12 +397,14 @@ h2 {
 h3 {
   font-size: 24px;
   line-height: 32px;
+
   &.h3--sm-h4 {
-    @media(max-width: 991px){
+    @media(max-width: 991px) {
       font-size: 18px;
       line-height: 26px;
     }
   }
+
   &.h3--sm-h5 {
     @media(max-width: 991px) {
       font-size: 16px;
@@ -738,6 +747,7 @@ h5 {
             right: -3px;
             top: -1px;
           }
+
           &--bg-bezh {
             &::before {
               background-color: var(--bezhevyy);
@@ -992,10 +1002,12 @@ h5 {
 .date-col {
   width: 100px;
   flex-shrink: 0;
-  @media(max-width: 1199px){
+
+  @media(max-width: 1199px) {
     width: 76px;
   }
-  @media(max-width: 991px){
+
+  @media(max-width: 991px) {
     width: 100px;
   }
 }
@@ -1003,7 +1015,8 @@ h5 {
 .status-col {
   width: 180px;
   flex-shrink: 0;
-  @media(max-width: 575px){
+
+  @media(max-width: 575px) {
     width: 165px;
   }
 }
@@ -1015,7 +1028,8 @@ h5 {
   @media(max-width: 1199px) {
     width: 186px;
   }
-  @media(max-width: 991px){
+
+  @media(max-width: 991px) {
     width: 100%;
   }
 }
@@ -1023,7 +1037,8 @@ h5 {
 .doc-col {
   width: 260px;
   flex-shrink: 0;
-  @media(max-width: 350px){
+
+  @media(max-width: 350px) {
     width: 250px;
   }
 }
@@ -1052,8 +1067,9 @@ h5 {
     background-color: #fff;
     border-bottom: 1px solid var(--krasnyy);
   }
-  .contextMenuBtn{
-    @media(max-width: 991px){
+
+  .contextMenuBtn {
+    @media(max-width: 991px) {
       position: absolute;
       right: 0;
       top: 0;
@@ -1079,7 +1095,8 @@ h5 {
 
 .filterW {
   position: relative;
-  @media(max-width: 991px){
+
+  @media(max-width: 991px) {
     position: unset;
   }
 }
@@ -1120,11 +1137,13 @@ h5 {
   right: -5px;
   top: -3px;
 }
+
 .fw-sm-medium {
-  @media(max-width: 991px){
-    font-weight: 500!important;
+  @media(max-width: 991px) {
+    font-weight: 500 !important;
   }
 }
+
 .fw-sm-semibold {
   @media(max-width: 991px) {
     font-weight: 600 !important;
@@ -1193,22 +1212,26 @@ h5 {
     width: 100%;
   }
 }
+
 .width-lg-100 {
-  @media(max-width: 991px){
+  @media(max-width: 991px) {
     width: 100%;
   }
 }
+
 .icon-32 {
   width: 32px;
   height: 32px;
   flex-shrink: 0;
 }
+
 .contentText {
   ul {
     li {
       margin-bottom: 10px;
       padding-left: 24px;
       position: relative;
+
       &::before {
         content: '';
         position: absolute;
@@ -1222,24 +1245,37 @@ h5 {
     }
   }
 }
+
 .navArrow {
   &.swiper-button-disabled {
     opacity: .5;
     pointer-events: none;
   }
+
   &:hover {
     svg {
       stroke: var(--krasnyy);
     }
   }
+
   &Next {
     transform: rotate(180deg);
   }
+
   svg {
     fill: transparent;
     stroke: var(--secondary);
     width: 32px;
     height: 32px;
     stroke-width: 4px;
+  }
+}
+
+.textarea-noscroll {
+  resize: none;
+  max-height: unset;
+
+  &.auto {
+    overflow-y: hidden;
   }
 }

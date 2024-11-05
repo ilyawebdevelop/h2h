@@ -14365,6 +14365,16 @@ section {
   position: relative;
   background-color: #fff;
 }
+@media (max-width: 991px) {
+  .wrapper {
+    padding-top: 89px;
+  }
+}
+@media (max-width: 575px) {
+  .wrapper {
+    padding-top: 74px;
+  }
+}
 
 .main {
   flex: 1 0 auto;
@@ -15374,6 +15384,14 @@ h5.h5--sm-h6 {
   stroke-width: 4px;
 }
 
+.textarea-noscroll {
+  resize: none;
+  max-height: unset;
+}
+.textarea-noscroll.auto {
+  overflow-y: hidden;
+}
+
 .button {
   display: flex;
   align-items: center;
@@ -16172,6 +16190,15 @@ a.bill-download svg {
   stroke-width: 1px;
 }
 
+@media (max-width: 991px) {
+  .header {
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    top: 0;
+    background-color: #fff;
+  }
+}
 .header--black {
   background-color: var(--seryy);
   padding-top: 12px;
@@ -16347,12 +16374,19 @@ a.bill-download svg {
 @media (max-width: 991px) {
   .chatContent {
     font-size: 14px;
-    height: calc(100vh - 89px);
+    height: unset;
+    min-height: unset;
+    max-height: calc(100vh - 160px);
   }
 }
 
 .chatW {
   min-height: calc(100vh - 90px);
+}
+@media (max-width: 991px) {
+  .chatW {
+    min-height: unset;
+  }
 }
 
 .sidebarRight {
@@ -16366,7 +16400,7 @@ a.bill-download svg {
   .sidebarRight {
     display: none;
     width: 100%;
-    height: calc(100vh - 89px);
+    height: calc(100vh - 160px);
   }
 }
 .sidebarRight.active {
@@ -16426,6 +16460,7 @@ a.bill-download svg {
   .actionTextStart textarea {
     height: 26px;
     padding-top: 0;
+    font-size: 16px;
   }
 }
 .actionTextStart textarea::placeholder {
@@ -16468,6 +16503,11 @@ a.bill-download svg {
   padding-left: 20px;
   height: 56px;
   padding-right: 56px;
+}
+@media (max-width: 991px) {
+  .chatSearch input {
+    font-size: 16px;
+  }
 }
 .chatSearch input:focus {
   border-color: var(--secondary);

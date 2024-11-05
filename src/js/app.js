@@ -120,6 +120,11 @@ document.addEventListener('click', e => {
     actionBtnStart?.classList.remove('active');
     chatActionInner?.classList.remove('flex-column');
     chatActionBtnW?.classList.remove('w-100');
+    console.log('123');
+    document.querySelectorAll('.textarea-noscroll').forEach(el => {
+      el.style.height = el.setAttribute('style', 'height: ' + 'px');
+      el.classList.remove('auto');     
+    });
   }
   if (!its_filterAction && !its_filterBtn && !its_filterSmBtn) {
     filterAction?.classList.remove('active');
@@ -245,4 +250,13 @@ let checkbox_org = document.getElementById('checkbox_org');
 let organizationBlock = document.querySelector('.organization-block');
 checkbox_org?.addEventListener('click', () => {
   organizationBlock.classList.toggle('d-none')
+});
+
+document.querySelectorAll('.textarea-noscroll').forEach(el => {
+  el.style.height = el.setAttribute('style', 'height: ' + el.scrollHeight + 'px');
+  el.classList.add('auto');
+  el.addEventListener('input', e => {
+    el.style.height = 'auto';
+    el.style.height = (el.scrollHeight) + 'px';
+  });
 });
