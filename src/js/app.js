@@ -120,7 +120,6 @@ document.addEventListener('click', e => {
     actionBtnStart?.classList.remove('active');
     chatActionInner?.classList.remove('flex-column');
     chatActionBtnW?.classList.remove('w-100');
-    console.log('123');
     document.querySelectorAll('.textarea-noscroll').forEach(el => {
       el.style.height = el.setAttribute('style', 'height: ' + 'px');
       el.classList.remove('auto');     
@@ -247,10 +246,18 @@ var mySwiperTeam = new Swiper(teamSlider, {
 });
 
 let checkbox_org = document.getElementById('checkbox_org');
+let checkbox_kontragent = document.getElementById('checkbox_contragent');
 let organizationBlock = document.querySelector('.organization-block');
+let contragentBlock = document.querySelector('.kontragent-block');
 checkbox_org?.addEventListener('click', () => {
   organizationBlock.classList.toggle('d-none')
 });
+checkbox_kontragent?.addEventListener('click', () => {
+  contragentBlock.classList.toggle('d-none')
+});
+
+
+
 
 document.querySelectorAll('.textarea-noscroll').forEach(el => {
   el.style.height = el.setAttribute('style', 'height: ' + el.scrollHeight + 'px');

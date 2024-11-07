@@ -17,6 +17,18 @@
       stroke: var(--krasnyy);
     }
   }
+  &-hover-orange {
+  
+    &:hover {
+      background-color: var(--krasnyy);
+      color: #fff;
+      svg {
+        // stroke: #fff;
+        fill: #fff;
+      }
+    }
+   
+  }
 
   &.width-sm-100 {
     @media(max-width: 575px) {
@@ -120,6 +132,13 @@
 
       svg {
         fill: #fff;
+      }
+    }
+    &-hover-orange {
+      &:hover {
+        background-color: var(--krasnyy);
+     border-color: var(--krasnyy);
+      
       }
     }
   }
@@ -634,6 +653,10 @@ a.bill-download {
 .infoBtn{
   cursor: pointer;
   transition: opacity .2s linear;
+  img {
+    width: 25px;
+    min-width: 25px;   
+  }
   &:hover {
     opacity: .85;
   }

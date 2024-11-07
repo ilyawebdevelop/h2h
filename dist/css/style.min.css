@@ -14306,6 +14306,12 @@ section {
   padding-top: 60px;
   padding-bottom: 60px;
 }
+@media (max-width: 991px) {
+  section {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
 
 .sect.pb-0 {
   padding-bottom: 0;
@@ -14561,6 +14567,13 @@ a.hover--orange:hover {
   .text-sm-14 {
     font-size: 14px;
     line-height: 20px;
+  }
+}
+
+@media (max-width: 991px) {
+  .text-sm-12 {
+    font-size: 12px;
+    line-height: 16px;
   }
 }
 
@@ -14936,6 +14949,9 @@ h5.h5--sm-h6 {
 }
 .agreement input:checked + label .rect--bg-bezh::before {
   background-color: var(--bezhevyy);
+}
+.agreement input:checked + label .rect--bg-svetlo-seryy::before {
+  background-color: var(--svetlo-seryy);
 }
 .agreement label {
   cursor: pointer;
@@ -15408,6 +15424,13 @@ h5.h5--sm-h6 {
 .button:hover .svg {
   stroke: var(--krasnyy);
 }
+.button-hover-orange:hover {
+  background-color: var(--krasnyy);
+  color: #fff;
+}
+.button-hover-orange:hover svg {
+  fill: #fff;
+}
 @media (max-width: 575px) {
   .button.width-sm-100 {
     width: 100%;
@@ -15495,6 +15518,10 @@ h5.h5--sm-h6 {
 }
 .button--transparent-black:hover svg {
   fill: #fff;
+}
+.button--transparent-black-hover-orange:hover {
+  background-color: var(--krasnyy);
+  border-color: var(--krasnyy);
 }
 .button--transparent-gray {
   border: 1px solid var(--obvodka);
@@ -15931,6 +15958,10 @@ a.bill-download svg {
 .infoBtn {
   cursor: pointer;
   transition: opacity 0.2s linear;
+}
+.infoBtn img {
+  width: 25px;
+  min-width: 25px;
 }
 .infoBtn:hover {
   opacity: 0.85;
@@ -16376,7 +16407,7 @@ a.bill-download svg {
     font-size: 14px;
     height: unset;
     min-height: unset;
-    max-height: calc(100vh - 160px);
+    max-height: calc(100vh - 89px);
   }
 }
 
@@ -16400,7 +16431,7 @@ a.bill-download svg {
   .sidebarRight {
     display: none;
     width: 100%;
-    height: calc(100vh - 160px);
+    height: calc(100vh - 89px);
   }
 }
 .sidebarRight.active {

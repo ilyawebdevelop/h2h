@@ -113,8 +113,8 @@
 			<section class="sect">
   <div class="container">
 
-    <div class="d-flex mb-4 align-items-center gap-2 justify-content-between">
-      <h3 class="h3 mb-0 pb-0 mb-lg-4 pb-lg-2 text-uppercase">
+    <div class="d-flex mb-4 align-items-center gap-2 justify-content-between pb-3 pb-lg-0">
+      <h3 class="h3 text-uppercase mb-0">
         Медиаторы
       </h3>
       <button class="button button--black rounded-5 width-min-360 d-none d-lg-flex" data-fancybox
@@ -207,7 +207,7 @@
                 Медиатор
               </div>
               <div class="text--sm client-col">
-                Его телефон
+                Телефон
               </div>
             </div>
           </div>
@@ -446,6 +446,59 @@
             </div>
           </div>
         </a>
+      </div>
+
+      <div class="paginationW mt-4">
+        <div class="row">
+  <div class="col-lg-6">
+    <div class="d-none d-lg-flex align-items-center gap-2">
+      <span>Отображать по:</span>
+      <select class="formSelect formSelect-min-w-160" name="pagination_show" id="pagination_show">
+        <option value="0">10</option>
+        <option value="1">20</option>
+        <option value="2">50</option>
+      </select>
+    </div>
+  </div>
+  <div class="col-lg-6">
+    <button class="button mx-auto button--orange rounded-5 px-5 width-sm-100 text-uppercase text--sm d-flex d-lg-none mt-3 mb-4" disabled>
+      Загрузить ещё
+    </button>
+    <div class="pagination justify-content-center justify-content-lg-end">
+      <ul class="d-flex justify-content-center gap-2">
+        <li>
+          <a href="#" class="pag-prev pag-disabled">
+            <svg>
+              <use xlink:href="img/icons/icons.svg#pag-prev"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="pag-page current">1</a>
+        </li>
+        <li>
+          <a href="#" class="pag-page">2</a>
+        </li>
+        <li>
+          <a href="#" class="pag-page">...</a>
+        </li>
+        <li class="d-none d-sm-flex">
+          <a href="#" class="pag-page">14</a>
+        </li>
+        <li class="d-none d-sm-flex">
+          <a href="#" class="pag-page">15</a>
+        </li>
+        <li>
+          <a href="#" class="pag-next">
+            <svg>
+              <use xlink:href="img/icons/icons.svg#pag-next"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
       </div>
 
 
@@ -1055,7 +1108,8 @@
           <svg style="stroke: #fff; stroke-width: 2px;">
             <use xlink:href="img/icons/icons.svg#check-black"></use>
           </svg>
-          <span class="text-uppercase text--sm fw-semibold "> Одобрить заявку</span>
+          <span class="text-uppercase text--sm fw-semibold d-none d-lg-block"> Одобрить заявку</span>
+          <span class="text-uppercase text--sm fw-semibold d-block d-lg-none"> Одобрить</span>
         </button>
       </div>
     </div>
@@ -1145,7 +1199,7 @@
     <div class="d-flex justify-content-between align-items-center">
       <a class="text-uppercase text--sm fw-semibold hover--orange d-none d-lg-block" href="#">отменить </a>
       <div class="d-flex gap-2 align-items-center mediatorChangeBtnW width-sm-100">
-        <button class="button button--transparent-black hover-black-stroke-svg width-sm-100">
+        <button class="button button--transparent-black button--transparent-black-hover-orange hover-black-stroke-svg width-sm-100">
           <svg class="hover-black-stroke-svg">
             <use xlink:href="img/icons/icons.svg#remove"></use>
           </svg>
@@ -1252,7 +1306,8 @@
           <svg style="stroke: #fff; stroke-width: 2px;">
             <use xlink:href="img/icons/icons.svg#check-black"></use>
           </svg>
-          <span class="text-uppercase text--sm fw-semibold "> Одобрить заявку</span>
+          <span class="text-uppercase text--sm fw-semibold d-none d-lg-block"> Одобрить заявку</span>
+          <span class="text-uppercase text--sm fw-semibold d-block d-lg-none"> Одобрить</span>
         </button>
       </div>
     </div>

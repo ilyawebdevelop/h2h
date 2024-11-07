@@ -54,6 +54,10 @@ table {
 section {
   padding-top: 60px;
   padding-bottom: 60px;
+  @media(max-width: 991px){
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
 }
 
 .sect {
@@ -332,6 +336,12 @@ a.hover--orange {
   @media(max-width: 991px) {
     font-size: 14px;
     line-height: 20px;
+  }
+}
+.text-sm-12 {
+  @media(max-width: 991px){
+    font-size: 12px;
+    line-height: 16px;
   }
 }
 
@@ -751,6 +761,11 @@ h5 {
           &--bg-bezh {
             &::before {
               background-color: var(--bezhevyy);
+            }
+          }
+          &--bg-svetlo-seryy {
+            &::before {
+              background-color: var(--svetlo-seryy);
             }
           }
         }
