@@ -65,6 +65,13 @@
       }
     }
   }
+  &-fixed {
+    position: fixed;
+    z-index: 3;    
+    width: 100%;
+    top: 0;
+   
+  }
 }
 .orderIcon {
   fill: transparent;

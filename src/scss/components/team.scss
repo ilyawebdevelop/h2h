@@ -3,37 +3,58 @@
   padding-top: 90px;
   padding-bottom: 120px;
   overflow: hidden;
-  @media(max-width: 991px){
+
+  @media(max-width: 991px) {
     padding-top: 60px;
     padding-bottom: 90px;
   }
 }
+
 .teamSlider {
   overflow: visible;
-  @media(max-width: 575px){
+
+  @media(max-width: 575px) {
     padding-right: 20px;
   }
 }
+
 .teamSlide {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   max-width: 760px;
   column-gap: 40px;
-  @media(max-width: 767px){
+
+  &:hover {
+    .teamSlideContent {
+      -webkit-box-shadow: -4px 4px 8px 0px rgba(0, 0, 0, 0.32);
+      -moz-box-shadow: -4px 4px 8px 0px rgba(0, 0, 0, 0.32);
+      box-shadow: -4px 4px 8px 0px rgba(0, 0, 0, 0.32);
+    } 
+    .teamSlideImg {
+      -webkit-box-shadow: 5px 4px 8px 0px rgba(0, 0, 0, 0.32);
+      -moz-box-shadow: 5px 4px 8px 0px rgba(0, 0, 0, 0.32);
+      box-shadow: 5px 4px 8px 0px rgba(0, 0, 0, 0.32);
+    }
+  }
+
+  @media(max-width: 767px) {
     column-gap: 0;
     row-gap: 20px;
   }
+
   &Title {
     letter-spacing: -0.01em;
     margin-bottom: 10px;
   }
 
   &Img {
+    transition: box-shadow .2s linear;
     img {
       height: 525px;
       width: 100%;
       object-fit: cover;
-      @media(max-width: 575px){
+
+      @media(max-width: 575px) {
         height: 100vw;
       }
     }
@@ -42,13 +63,16 @@
   &Content {
     border: 1px solid rgba(247, 240, 233, 0.2);
     padding: 40px;
+    transition: box-shadow .2s linear;
   }
+
   &Work {
     span {
       font-weight: 500;
       color: var(--obvodka);
       display: block;
-      @media(max-width: 991px){
+
+      @media(max-width: 991px) {
         font-weight: 400;
         font-size: 14px;
         line-height: 17px;
@@ -59,12 +83,14 @@
 
 .teamSlideCol {
   grid-column: 6 span;
-  @media(max-width: 767px){
+
+  @media(max-width: 767px) {
     grid-column: 12 span;
   }
 }
+
 .teamSlideArrow {
-  @media(max-width: 767px){
+  @media(max-width: 767px) {
     display: none;
   }
 }
